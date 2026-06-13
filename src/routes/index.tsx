@@ -1,0 +1,224 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { DomainCard } from "@/components/DomainCard";
+import { DOMAINS, FACULTY } from "@/lib/domains";
+import heroRice from "@/assets/hero-rice.jpg";
+import heroSpices from "@/assets/hero-spices.jpg";
+
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "SSSIHL Centre of Excellence — Food Processing & Preservation" },
+      { name: "description", content: "Eight flagship research domains in translational food science, women-led innovation and startup incubation at SSSIHL." },
+      { property: "og:title", content: "SSSIHL Centre of Excellence — Food Processing & Preservation" },
+      { property: "og:description", content: "Translational food science with a women-first mandate at SSSIHL." },
+    ],
+  }),
+  component: HomePage,
+});
+
+const METRICS = [
+  { value: "08", label: "Flagship Domains", color: "text-pomegranate" },
+  { value: "₹24L+", label: "ICMR Funded Research", color: "text-saffron" },
+  { value: "15+", label: "Doctoral Scholars", color: "text-sage" },
+  { value: "100%", label: "Women-Led Faculty", color: "text-plum" },
+];
+
+const ROADMAP = [
+  { years: "Year 1–2", title: "Foundation & Infrastructure", body: "Strengthen Millet & Dairy Technology cores. Establish the Packaging Lab.", color: "bg-saffron" },
+  { years: "Year 3–4", title: "Safety & Adulteration Centre", body: "Launch national training programs and the Food Safety & Adulteration detection hub.", color: "bg-pomegranate" },
+  { years: "Year 5", title: "Food Innovation Hub", body: "Support 100+ food startups. Develop export-ready technologies for South Asia.", color: "bg-sage" },
+];
+
+function HomePage() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
+
+      {/* HERO */}
+      <section className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-32">
+        <div aria-hidden className="absolute -top-32 -left-32 size-96 rounded-full bg-turmeric/20 blur-3xl animate-blob" />
+        <div aria-hidden className="absolute top-1/3 -right-40 size-[28rem] rounded-full bg-pomegranate/15 blur-3xl animate-blob" style={{ animationDelay: "2s" }} />
+
+        <div className="container-page grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center relative">
+          <div className="animate-fade-up">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sage/15 text-sage text-[11px] font-bold uppercase tracking-[0.18em] mb-8">
+              <span className="relative flex size-2">
+                <span className="animate-ping absolute inline-flex size-full rounded-full bg-sage opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-sage" />
+              </span>
+              Established 2024 • SSSIHL
+            </div>
+            <h1 className="font-display text-5xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight mb-8">
+              Where <span className="italic text-shimmer">Science</span><br />
+              Meets <span className="italic text-pomegranate">Sustenance.</span>
+            </h1>
+            <p className="text-lg text-plum-deep/70 leading-relaxed max-w-xl mb-10">
+              The Centre of Excellence in Food Processing & Preservation bridges ancient Indian wisdom with
+              modern nutritional precision — led by women researchers, translating laboratory breakthroughs
+              into community-wide health and financial empowerment.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/domains" className="px-7 py-3.5 bg-plum text-cream rounded-full font-semibold hover:bg-pomegranate transition-all shadow-xl shadow-plum/25 hover:-translate-y-0.5">
+                Explore 8 Domains
+              </Link>
+              <Link to="/about" className="px-7 py-3.5 border-2 border-plum/20 text-plum rounded-full font-semibold hover:bg-plum/5 transition-all">
+                Our Vision →
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative group animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <div className="relative aspect-square rounded-[40px] overflow-hidden shadow-2xl ring-1 ring-plum/10">
+              <img src={heroRice} alt="Indian pigmented rice from a woven basket" width={1280} height={1280} className="size-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-plum-deep/30 via-transparent to-transparent" />
+            </div>
+            <div className="absolute -bottom-6 -left-6 bg-cream p-6 rounded-2xl shadow-xl ring-1 ring-plum/10 max-w-[220px] animate-float-slow">
+              <div className="font-display text-3xl italic text-pomegranate">570M</div>
+              <div className="text-[11px] font-medium uppercase tracking-tight text-plum-deep/60">Tonnes of global rice demand by 2025</div>
+            </div>
+            <div className="absolute -top-8 -right-4 size-24 rounded-full bg-turmeric/30 animate-spin-slow ring-1 ring-turmeric/40" />
+          </div>
+        </div>
+      </section>
+
+      {/* METRICS */}
+      <section className="container-page py-12 border-y border-plum/10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {METRICS.map((m) => (
+            <div key={m.label} className="text-center group">
+              <div className={`font-display italic text-5xl lg:text-6xl mb-2 ${m.color} group-hover:scale-110 transition-transform`}>{m.value}</div>
+              <div className="text-[10px] uppercase tracking-[0.22em] font-bold text-plum-deep/60">{m.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* DOMAINS */}
+      <section id="domains" className="container-page py-24 lg:py-32">
+        <div className="text-center mb-16">
+          <div className="text-[10px] uppercase tracking-[0.25em] text-pomegranate font-bold mb-4">08 Core Specializations</div>
+          <h2 className="font-display text-4xl lg:text-6xl mb-6">Flagship <span className="italic">Research Domains</span></h2>
+          <div className="w-24 h-1 bg-turmeric mx-auto mb-6" />
+          <p className="max-w-2xl mx-auto text-plum-deep/70">
+            From ancient grain restoration to futuristic packaging — eight verticals devoted to the
+            complete lifecycle of food preservation, safety and commercialization.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {DOMAINS.map((d) => <DomainCard key={d.slug} domain={d} />)}
+        </div>
+      </section>
+
+      {/* FEATURED PROJECT */}
+      <section className="bg-plum-deep text-cream py-24 lg:py-32 relative overflow-hidden">
+        <div aria-hidden className="absolute top-10 right-10 size-72 border border-turmeric/20 rounded-full animate-spin-slow" />
+        <div aria-hidden className="absolute bottom-10 left-10 size-48 border border-pomegranate/30 rounded-full animate-spin-slow" style={{ animationDirection: "reverse" }} />
+
+        <div className="container-page grid lg:grid-cols-2 gap-16 items-center relative">
+          <div className="relative">
+            <img src={heroSpices} alt="Spices in scientific glassware" width={1024} height={1280} loading="lazy" className="rounded-[40px] aspect-[4/5] object-cover shadow-2xl" />
+            <div className="absolute -bottom-6 -right-6 bg-turmeric text-plum-deep p-5 rounded-2xl shadow-xl max-w-[200px]">
+              <div className="text-xs font-bold uppercase tracking-widest mb-1">ICMR Funded</div>
+              <div className="font-display italic text-2xl leading-tight">₹24 Lakhs</div>
+            </div>
+          </div>
+          <div>
+            <h4 className="text-turmeric text-[10px] font-bold uppercase tracking-[0.25em] mb-4">Research Spotlight</h4>
+            <h2 className="font-display text-4xl lg:text-5xl leading-tight mb-6">
+              Antidiabetic potential of <span className="italic">Indian pigmented rice</span>
+            </h2>
+            <p className="text-cream/70 text-lg leading-relaxed mb-8">
+              A mechanistic, metabolomic approach to understanding how phenolic acids and anthocyanins
+              in heritage rice varieties can manage glycemic response and reduce diabetes risk across Asia.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {[
+                "Metabolomic profiling of phenolics & anthocyanins",
+                "Glycemic response evaluation in vivo",
+                "Gluten-free therapeutic convenience foods",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-4">
+                  <span className="size-6 rounded-full bg-sage/30 ring-1 ring-sage grid place-items-center text-xs mt-0.5">✓</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex items-center gap-4 p-5 rounded-2xl bg-cream/5 border border-cream/10 backdrop-blur w-fit">
+              <div className="size-12 bg-pomegranate rounded-full grid place-items-center font-display italic text-cream">Dr</div>
+              <div>
+                <div className="font-semibold">Dr. (Miss) N Srividya</div>
+                <div className="text-xs text-cream/60 uppercase tracking-widest">Principal Investigator</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FACULTY PREVIEW */}
+      <section className="container-page py-24 lg:py-32">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 mb-16">
+          <div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-sage font-bold mb-4">Academic Leadership</div>
+            <h2 className="font-display text-4xl lg:text-5xl">Led by <span className="italic text-pomegranate">women scientists</span></h2>
+          </div>
+          <Link to="/faculty" className="text-sm font-bold uppercase tracking-widest text-plum hover:text-pomegranate flex items-center gap-2 group">
+            See full faculty <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {FACULTY.map((f, i) => (
+            <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
+              <div className={`size-14 rounded-2xl mb-5 grid place-items-center font-display italic text-2xl text-cream bg-${f.color}`}>
+                {f.name.split(" ").slice(-1)[0]?.[0]}
+              </div>
+              <h4 className="font-display text-xl mb-2 leading-tight">{f.name}</h4>
+              <p className="text-xs uppercase tracking-widest text-plum-deep/50 font-bold mb-4">{f.role}</p>
+              <p className="text-sm text-plum-deep/70 leading-relaxed">{f.bio}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ROADMAP */}
+      <section className="container-page py-24">
+        <div className="text-center mb-16">
+          <div className="text-[10px] uppercase tracking-[0.25em] text-saffron font-bold mb-4">5 Year Roadmap</div>
+          <h2 className="font-display text-4xl lg:text-5xl">The future of <span className="italic">SSSIHL CoE</span></h2>
+        </div>
+        <div className="max-w-3xl mx-auto border-l-2 border-plum/15 pl-2">
+          {ROADMAP.map((r) => (
+            <div key={r.years} className="relative pl-12 pb-14 last:pb-0">
+              <div className={`absolute -left-[11px] top-1 size-5 rounded-full ${r.color} ring-4 ring-cream`} />
+              <span className="text-[10px] font-mono uppercase tracking-widest text-pomegranate block mb-2">{r.years}</span>
+              <h3 className="font-display text-2xl mb-3">{r.title}</h3>
+              <p className="text-plum-deep/70 leading-relaxed">{r.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container-page pb-24">
+        <div className="relative rounded-[40px] bg-gradient-to-br from-plum via-pomegranate to-saffron p-12 lg:p-20 text-cream overflow-hidden">
+          <div aria-hidden className="absolute -top-20 -right-20 size-80 rounded-full bg-turmeric/30 blur-3xl" />
+          <div className="relative max-w-2xl">
+            <h2 className="font-display text-4xl lg:text-5xl leading-tight mb-6">
+              Partner with our <span className="italic">Centre of Excellence.</span>
+            </h2>
+            <p className="text-cream/85 text-lg mb-8">
+              Industry, academia, FPOs and entrepreneurs — collaborate on translational food research,
+              FSSAI-ready product development, and women-first incubation.
+            </p>
+            <Link to="/contact" className="inline-flex px-8 py-4 bg-cream text-plum rounded-full font-bold hover:bg-turmeric transition-all shadow-xl">
+              Start a conversation →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </div>
+  );
+}
