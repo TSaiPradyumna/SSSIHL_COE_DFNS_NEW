@@ -26,7 +26,7 @@ export const DOMAINS: Domain[] = [
     slug: "cereal-millet-grain",
     number: "01",
     title: "Cereal, Millet & Ancient Grain Technology",
-    short: "Reviving heritage grains for modern metabolic health. (live test)",
+    short: "Reviving heritage grains for modern metabolic health.",
     emoji: "🌾",
     color: "saffron",
     image: milletImg,
