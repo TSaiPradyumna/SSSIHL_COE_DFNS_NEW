@@ -63,6 +63,55 @@ function AboutPage() {
       </section>
 
       <section className="container-page py-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-[10px] uppercase tracking-[0.25em] text-pomegranate font-bold mb-4">Department</div>
+          <h2 className="font-display text-3xl lg:text-4xl mb-4">Aum Sri Sai Ram</h2>
+          <p className="text-plum-deep/70 mb-2">Department of Food and Nutritional Sciences</p>
+          <p className="text-plum-deep/70 mb-2">Sri Sathya Sai Institute of Higher Learning — Anantapur Campus</p>
+
+          <h3 className="font-semibold mt-6">Vision / Aim</h3>
+          <p className="text-plum-deep/70">The department intends to establish a center of excellence in food processing and preservation, drawing from its extensive research experience in various food processing methods and ensuring the stability of the resulting products during storage.</p>
+
+          <h3 className="font-semibold mt-6">Our Research Themes</h3>
+          <ul className="list-disc list-inside text-plum-deep/70">
+            <li>Processing of foods for sustainability and stability</li>
+            <li>Postharvest technology of horticultural products</li>
+            <li>Food material characterization</li>
+            <li>Food product development and evaluation</li>
+            <li>Food processing waste utilization for value addition</li>
+            <li>Food safety and quality</li>
+          </ul>
+
+          <h3 className="font-semibold mt-6">Team & Interdisciplinary Expertise</h3>
+          <p className="text-plum-deep/70">Team of experts: Faculty and Research Scholars from the DFNS, SSSIHL. Supporting team: Research Scholars from the DFNS, SSSIHL.</p>
+
+          <h3 className="font-semibold mt-6">Specific Objectives (examples)</h3>
+          <div className="space-y-4 text-plum-deep/70">
+            <div>
+              <strong>Research theme:</strong> Food safety and quality<br />
+              <strong>Main area of work:</strong> Rapid adulteration detection kits<br />
+              <strong>Objective:</strong> Develop low-cost, field-deployable tests for common adulterants<br />
+              <strong>Working team members:</strong> Faculty lead, 2 doctoral scholars<br />
+              <strong>Publications:</strong> Ongoing — methodology papers and validation reports
+            </div>
+
+            <div>
+              <strong>Research theme:</strong> Product development and evaluation<br />
+              <strong>Main area of work:</strong> Millet-based therapeutic convenience foods<br />
+              <strong>Objective:</strong> Formulate shelf-stable, low-GI instant mixes for diabetic care<br />
+              <strong>Working team members:</strong> Faculty lead, sensory scientist, 2 scholars
+            </div>
+
+            <div>
+              <strong>Research theme:</strong> Waste valorisation<br />
+              <strong>Main area of work:</strong> Polyphenol recovery from fruit pomace<br />
+              <strong>Objective:</strong> Convert waste streams into value-added extracts for beverages
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-page py-16">
         <div className="grid lg:grid-cols-3 gap-6">
           {PILLARS.map((p, i) => (
             <div key={p.title} className="bg-card rounded-3xl p-8 ring-1 ring-plum/10 hover:-translate-y-1 transition-all animate-fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
