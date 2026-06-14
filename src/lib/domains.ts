@@ -418,39 +418,5 @@ export const DOMAINS: Domain[] = [
   },
 ];
 
-export const FACULTY = [
-  {
-    name: "Prof. (Mrs.) B Andallu",
-    role: "Phytochemical Specialist • 25+ Years",
-    bio: "Invited speaker at the 107th Indian Science Congress on the role of phytochemicals in healthcare.",
-    color: "plum" as const,
-  },
-  {
-    name: "Dr... (Miss) N Srividya",
-    role: "Principal Investigator • Metabolomics",
-    bio: "Leads ICMR-funded research on the antidiabetic potential of Indian pigmented rice varieties.",
-    color: "pomegranate" as const,
-  },
-  {
-    name: "Dr. (Mrs.) A Sumana",
-    role: "Food Industry Consultant • Regulatory Expert",
-    bio: "Board of Studies member, KVR Government College — works at the intersection of safety and entrepreneurship.",
-    color: "sage" as const,
-  },
-  {
-    name: "Dr. (Mrs.) Ambati Padmaja",
-    role: "Product Development • Sensory Science",
-    bio: "Awarded 3rd Place at FOODS 2019 for development of an instant soup mix from Muntingia calabura.",
-    color: "turmeric" as const,
-  },
-];
-
-export const SCHOLARS = [
-  "Ms. Ashrita C Haldipur",
-  "Ms. Manjula Devi Ghoora",
-  "Ms. N Saiharini",
-  "Ms. Shrijana Rasaily",
-  "Ms. Alisha Pradhan",
-  "Ms. Sai Sruthi Shree K K",
-  "Ms. Sai Dharshini S",
-];
+export { FACULTY, SCHOLARS } from "./faculty";
+export type { FacultyMember } from "./faculty";
