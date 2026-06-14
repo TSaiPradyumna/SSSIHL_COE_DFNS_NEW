@@ -27,13 +27,19 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          node -v
+          npm -v
+          npm install
 
       - name: Build for GitHub Pages
         run: npm run build:pages
         env:
           GITHUB_PAGES: "true"
           GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Verify build output
+        run: ls -la dist/client
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
