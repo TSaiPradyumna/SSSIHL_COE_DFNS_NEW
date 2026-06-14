@@ -222,7 +222,7 @@ export const DOMAINS: Domain[] = [
       "N/A",
     ],
     team: [
-      { name: "Prof... (Mrs.) B Andallu", role: "Phytochemical Specialist" },
+      { name: "Prof. (Mrs.) B Andallu", role: "Phytochemical Specialist" },
       { name: "Ms. Alisha Pradhan", role: "Doctoral Scholar" },
     ],
     projects: [
