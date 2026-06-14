@@ -159,6 +159,22 @@ function DomainDetail() {
         </div>
       </section>
 
+      {d.publications?.length ? (
+        <section className="bg-cream-soft py-20">
+          <div className="container-page">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-plum font-bold mb-4">Publications</div>
+            <h2 className="font-display text-3xl lg:text-4xl mb-10">Evidence & peer-reviewed outputs.</h2>
+            <ul className="space-y-4">
+              {d.publications.map((pub) => (
+                <li key={pub} className="rounded-3xl bg-white p-6 ring-1 ring-plum/10 text-plum-deep leading-relaxed">
+                  {pub}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
       {/* NEXT */}
       <section className="container-page pb-24">
         <Link
