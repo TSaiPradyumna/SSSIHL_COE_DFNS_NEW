@@ -7,7 +7,7 @@
     "dev": "vite dev",
     "watch:git": "node ./scripts/watch-and-push.js",
     "build": "vite build",
-    "build:pages": "node ./scripts/build-github-pages.js && node ./scripts/prepare-github-pages.js",
+    "build:pages": "vite build && node ./scripts/prepare-github-pages.js",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "postbuild": "node ./scripts/fix-server-entry.js",
