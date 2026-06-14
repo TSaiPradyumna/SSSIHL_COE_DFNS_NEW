@@ -420,28 +420,46 @@ export const DOMAINS: Domain[] = [
 
 export const FACULTY = [
   {
-    name: "Prof. (Mrs.) B Andallu",
-    role: "Phytochemical Specialist • 25+ Years",
-    bio: "Invited speaker at the 107th Indian Science Congress on the role of phytochemicals in healthcare.",
+    name: "Dr. M Srijaya",
+    role: "Associate Professor & Head",
+    bio: "Head of Food & Nutritional Sciences focusing on food processing, preservation and applied nutrition.",
     color: "plum" as const,
   },
   {
-    name: "Dr... (Miss) N Srividya",
-    role: "Principal Investigator • Metabolomics",
-    bio: "Leads ICMR-funded research on the antidiabetic potential of Indian pigmented rice varieties.",
+    name: "Prof. N Srividya",
+    role: "Professor & Dean of Sciences",
+    bio: "Dean of Sciences and active researcher in food science and nutrition with 25+ years of experience.",
     color: "pomegranate" as const,
   },
   {
-    name: "Dr. (Mrs.) A Sumana",
-    role: "Food Industry Consultant • Regulatory Expert",
-    bio: "Board of Studies member, KVR Government College — works at the intersection of safety and entrepreneurship.",
+    name: "Prof. B Andallu",
+    role: "Professor (Hon.)",
+    bio: "Invited speaker at the 107th Indian Science Congress on the role of phytochemicals in healthcare.",
+    color: "saffron" as const,
+  },
+  {
+    name: "Dr. A Sumana",
+    role: "Asst. Professor",
+    bio: "Food Industry Consultant and regulatory expert working at the intersection of safety and entrepreneurship.",
     color: "sage" as const,
   },
   {
-    name: "Dr. (Mrs.) Ambati Padmaja",
-    role: "Product Development • Sensory Science",
-    bio: "Awarded 3rd Place at FOODS 2019 for development of an instant soup mix from Muntingia calabura.",
+    name: "Dr. Tapasya Anand",
+    role: "Asst. Professor",
+    bio: "Faculty member in Food & Nutritional Sciences contributing to functional foods and nutrition research.",
     color: "turmeric" as const,
+  },
+  {
+    name: "Dr. Ambati Padmaja",
+    role: "Asst. Professor",
+    bio: "Specializes in product development and sensory science. Awarded 3rd Place at FOODS 2019 for instant soup mix innovation.",
+    color: "basil" as const,
+  },
+  {
+    name: "Dr. Jhinuk Gupta",
+    role: "Asst. Professor",
+    bio: "Faculty member in Food & Nutritional Sciences with expertise in food technology and nutrition.",
+    color: "plum" as const,
   },
 ];
 
