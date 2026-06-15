@@ -16,7 +16,6 @@ export const Route = createFileRoute("/publications")({
   component: PublicationsPage,
 });
 
-// Explicit faculty index definitions to dynamically cross-reference the dataset author lists
 const FACULTY_FILTERS = [
   { name: "All Faculty Records", key: "all" },
   { name: "Dr. M Srijaya", key: "Srijaya" },
@@ -33,7 +32,6 @@ function PublicationsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFaculty, setSelectedFaculty] = useState("all");
 
-  // Multi-tier search and category intersection algorithm
   const filteredPublications = useMemo(() => {
     return PUBLICATIONS.filter((pub) => {
       const matchesSearch = 
@@ -50,7 +48,6 @@ function PublicationsPage() {
     });
   }, [searchQuery, selectedFaculty]);
 
-  // Regrouping matched outputs cleanly by Year matrix entries
   const publicationsByYear = useMemo(() => {
     return filteredPublications.reduce<Record<string, typeof PUBLICATIONS>>((acc, pub) => {
       if (!acc[pub.year]) acc[pub.year] = [];
@@ -67,7 +64,6 @@ function PublicationsPage() {
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader />
 
-      {/* Main Feature Banner Display */}
       <section className="container-page pt-16 pb-10">
         <div className="max-w-4xl">
           <div className="text-[10px] uppercase tracking-[0.25em] text-pomegranate font-bold mb-4">DFNS Publications</div>
@@ -79,7 +75,6 @@ function PublicationsPage() {
         </div>
       </section>
 
-      {/* Search Engine and Interactive Faculty Control Dashboard Panel */}
       <section className="container-page pb-12">
         <div className="bg-card rounded-3xl p-6 md:p-8 ring-1 ring-plum/10 shadow-sm space-y-6">
           <div className="grid gap-4">
@@ -117,7 +112,6 @@ function PublicationsPage() {
             </div>
           </div>
 
-          {/* Dynamic live match counter block */}
           <div className="pt-4 border-t border-plum/5 flex items-center justify-between text-xs font-medium text-plum-deep/60">
             <div>
               Showing <span className="text-pomegranate font-bold">{filteredPublications.length}</span> of {PUBLICATIONS.length} entries
@@ -137,15 +131,15 @@ function PublicationsPage() {
         </div>
       </section>
 
-      {/* Catalog Render Space grouped by Year outputs */}
       <section className="container-page pb-20">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10">
           <div>
             <div className="text-[10px] uppercase tracking-[0.25em] text-sage font-bold mb-4">Publication catalogue</div>
             <h2 className="font-display text-4xl">Filtered Publication Index</h2>
           </div>
-          <Link to="/research" className="inline-flex items-center gap-2 rounded-full border border-plum/20 px-5 py-3 text-sm text-plum-deep hover:bg-plum/5 transition-all">
-            View funded research page
+          {/* ✅ FIXED ROUTE LINK BELOW: Changed from /research to /collaboration */}
+          <Link to="/collaboration" className="inline-flex items-center gap-2 rounded-full border border-plum/20 px-5 py-3 text-sm text-plum-deep hover:bg-plum/5 transition-all">
+            View collaborations page
           </Link>
         </div>
 
@@ -204,7 +198,6 @@ function PublicationsPage() {
         )}
       </section>
 
-      {/* Footer Closing Context Summary Block */}
       <section className="container-page pb-24">
         <div className="rounded-4xl bg-plum-deep text-cream p-12 lg:p-16">
           <h2 className="font-display text-4xl mb-4">A legacy of structured research output tracking.</h2>
