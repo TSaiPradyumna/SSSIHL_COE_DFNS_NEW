@@ -7,9 +7,7 @@ export function SiteFooter() {
       <div className="container-page py-20 grid gap-12 lg:grid-cols-4">
         <div className="lg:col-span-2 max-w-md">
           <div className="flex items-center gap-3 mb-6">
-            <div className="size-12 rounded-full bg-turmeric grid place-items-center text-plum-deep font-display italic text-2xl">
-              S
-            </div>
+            <SiteLogo size="md" />
             <div>
               <div className="text-xs font-bold tracking-[0.2em] uppercase text-turmeric">SSSIHL</div>
               <div className="text-base font-semibold">Centre of Excellence</div>

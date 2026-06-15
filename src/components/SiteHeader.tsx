@@ -16,9 +16,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-cream/80 backdrop-blur-md border-b border-plum/10">
       <div className="container-page h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="size-10 rounded-full bg-plum flex items-center justify-center text-cream font-display italic text-xl shadow-md group-hover:rotate-12 transition-transform">
-            S
-          </div>
+          <SiteLogo className="group-hover:rotate-12 transition-transform" />
           <div className="flex flex-col leading-none">
             <span className="text-[10px] font-bold tracking-[0.18em] uppercase text-pomegranate">SSSIHL</span>
             <span className="text-sm font-semibold text-plum-deep tracking-tight">Centre of Excellence</span>
