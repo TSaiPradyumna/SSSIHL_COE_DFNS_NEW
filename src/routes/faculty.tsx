@@ -4,7 +4,17 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SCHOLARS } from "@/lib/domains";
 
-// Expanded rich dataset with all detailed profile information
+// Import local assets matching your folder exactly to bypass external website blocking
+import imgSumana from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-A_Sumana.jpg";
+import imgPadmaja from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Ambati_Padmaja.jpg";
+import imgAndallu from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-B_Andallu.jpg";
+import imgGupta from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Jhinuk_Gupta.jpg";
+import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpg";
+import imgMeera from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Manikkavachakan.jpg";
+import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Srividya.jpg";
+import imgTapasya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg";
+
+// Rich dataset using the local file imports
 const FACULTY_DETAILS = [
   {
     name: "Dr. M Srijaya",
@@ -13,7 +23,7 @@ const FACULTY_DETAILS = [
     email: "msrijaya@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "pomegranate",
-    image: "https://www.sssihl.edu.in/wp-content/uploads/2020/02/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpg",
+    image: imgSrijaya,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: false },
     overview: "Dr. (Mrs.) M Srijaya pursued her Bachelors in Home Science and Masters in Food Science and Nutrition from Sri Sathya Sai Institute of Higher Learning. She then joined the department as a lecturer in the year 1996. She also completed her Ph.D. in Food Technology from Sri Venkateswara University, Tirupathi, Andhra Pradesh. She is currently the Head, Department of Food & Nutritional Sciences, SSSIHL. She has extensive teaching and research experience in the fields of Food Technology and Nutrition and has efficaciously taught both core technical and applied courses to under graduate and post graduate students. Her research interests lie in the areas of food processing, preservation and applied nutrition. She has guided several students in the related areas, published papers and presented her research in various conferences.",
     areasOfTeaching: [
@@ -46,7 +56,7 @@ const FACULTY_DETAILS = [
     email: "nsrividya@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "turmeric",
-    image: "https://www.sssihl.edu.in/wp-content/uploads/2020/02/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Srividya.jpg",
+    image: imgSrividya,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: true },
     overview: "Prof. N. Srividya is an active researcher in the field of Food Science and Nutrition, in addition to her full-time teaching responsibilities at the Sri Sathya Sai Institute of Higher Learning. With over 25 years of teaching and research experience at SSSIHL, she has guided five Ph.D. scholars and supervised 33 M.Sc. projects. She has completed one research project and is currently working on two more, funded by reputable national agencies. Prof. Srividya was awarded gold medals for her outstanding academic performance in both B.Sc. and M.Sc. in Food Science and Nutrition from SSSIHL. She qualified for the UGC-NET Research Fellowship and has received multiple awards for her oral and poster presentations at national and international scientific conferences. Additionally, she has served as the Director of the Anantapur Campus. Prof. Srividya is a reviewer and editorial board member for several scientific journals. She has published over 50 articles in international peer-reviewed journals, along with numerous contributions to conference proceedings and book chapters. She is currently the Dean, Faculty of Sciences.",
     areasOfTeaching: [
@@ -87,7 +97,7 @@ const FACULTY_DETAILS = [
     email: "bandallu@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "plum",
-    image: "https://www.sssihl.edu.in/wp-content/uploads/2020/02/SSSIHL-Faculty-Food-Nutritional-Sciences-B_Andallu.jpg",
+    image: imgAndallu,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: true },
     overview: "Prof. B. Andallu is a Biochemist with expertise in natural product isolation and bioactivity assessment by in vitro methods as well as studies on natural remedies for oxidative stress-induced diseases viz. diabetes, arthritis, and cancer. A recipient of six awards and three gold medals at National and International levels, and an author of five books, Prof. Andallu’s expertise in these fields reflects in numerous publications which include, LAP, Germany, and Oxford Press. She has published over 60 review and research articles in peer-reviewed national and international journals presented more than 100 research papers in National and International seminars/conferences in India and overseas. Prof. Andallu has visited and delivered guest lectures at several universities in India, the USA, South Africa, and Sri Lanka. Prof. Andallu has completed several research projects, specialized in ‘Natural remedies for stress-induced diseases’, and guided over 50 dissertations in M.Sc., M.Phil. and Ph.D. She is a former member of the editorial board for Annals of Phytomedicine, reviewer of scientific journals, Life member in professional bodies like Indian Science Congress, Indian Pharmacological Society, Society of Biological Chemists, India, and Nutrition Society of India, apart from teaching undergraduate and postgraduate courses for over three decades. Prof. Andallu graduated from Andhra University in 1978 with a B.Sc. in Botany, Zoology, and Chemistry. She pursued her Masters in Biochemistry during 1978-1980 and was awarded a Doctorate degree in 2002 from Sri Krishnadevaraya University, Anantapur. She started her career in 1986 at Sri Sathya Sai Institute of Higher Learning. She served as Head, Department of Food and Nutritional Sciences from 2015 to 2017.",
     areasOfTeaching: [
@@ -111,7 +121,7 @@ const FACULTY_DETAILS = [
     email: "asumana@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "olive",
-    image: "https://www.sssihl.edu.in/wp-content/uploads/2020/02/SSSIHL-Faculty-Food-Nutritional-Sciences-A_Sumana.jpg",
+    image: imgSumana,
     professionalPages: { linkedin: false, researchgate: true, googleScholar: false },
     overview: "Dr. A Sumana is actively involved in research work apart from her full-time teaching duties. She graduated from Sri Sathya Sai Institute of Higher Learning in 1999 with a B.Sc. degree in Home Science. She graduated in her masters in Food Science and Nutrition from Sri Sathya Sai Institute of Higher Learning in 2001. She then cleared the National Eligibility Test (NET) for lectureship and joined Sri Sathya Sai Institute of Higher Learning in 2001. She went on to complete her Doctorate degree in 2017 from Sri Padmavati Mahila Visvavidyalayam, Tirupati, Andhra Pradesh.",
     areasOfTeaching: [
@@ -142,7 +152,7 @@ const FACULTY_DETAILS = [
     email: "meeram@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "pomegranate",
-    image: "https://www.sssihl.edu.in/wp-content/uploads/2020/02/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Manikkavachakan.jpg",
+    image: imgMeera,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: false },
     overview: "Dr. Meera Manikkavachakan graduated from Sri Sathya Sai Institute of Higher Learning, Anantapur Campus with a B.Sc. in Home Science and then her M.Sc. in Food Science and Nutrition. She joined the department as a Lecturer in 1996. She pursued a PG Diploma in Preventive and Promotive Health Care (PGDPPHC) at Apollo Hospitals Educational Research Foundation, Hyderabad in 2005, a PG Diploma in Geriatric Care (DGC) at KMM Academy of Health Sciences, Kochi, Kerala in 2006 and Food Safety supervisor in Catering, (Level-2) by FSSAI. She got her Doctorate degree in Food Science and Nutrition from Sri Venkateswara University, Tirupati, Andhra Pradesh. She is actively involved in research work apart from full-time teaching duties.",
     areasOfTeaching: [
@@ -169,7 +179,7 @@ const FACULTY_DETAILS = [
     email: "tapasyaanand@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "turmeric",
-    image: "https://www.sssihl.edu.in/wp-content/uploads/2020/02/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg",
+    image: imgTapasya,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: false },
     overview: "Dr. (Ms.) Tapasya Anand received her B.Sc. and M.Sc. degrees from Sri Sathya Sai Institute of Higher Learning, in 2005 and 2007, respectively. She received her Doctorate degree from SSSIHL in 2012. She joined as Assistant Professor at the Dept. of Food and Nutritional Sciences, Sri Sathya Sai Institute of Higher Learning, in 2013 and is also actively involved in research work in addition to her full-time teaching duties.",
     areasOfTeaching: [
@@ -196,7 +206,7 @@ const FACULTY_DETAILS = [
     email: "ambatipadmaja@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "plum",
-    image: "https://www.sssihl.edu.in/wp-content/uploads/2020/02/SSSIHL-Faculty-Food-Nutritional-Sciences-Ambati_Padmaja.jpg",
+    image: imgPadmaja,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: false },
     overview: "Dr. (Mrs.) Ambati Padmaja is an expert in Food Science, Nutrition and Technology (Phytochemical analysis, food fortification and evaluation and utilisation of food processing waste). She is actively involved in research work apart from her full-time teaching. She graduated from Sri Sathya Sai Institute of Higher Learning in 1997 with a B.Sc. in Home Science and M.Sc. in Food Science and Nutrition in 1999. She completed her Doctoral Degree in Food Technology in 2011 from Jawaharlal Nehru Technological University, Anantapur. She worked as a Senior Research Fellow in projects related to oilseeds and oils, funded by National bodies like Directorate of Vanaspati, Vegetable Oils and Fats, Govt. of India and DST. She also worked as a Lecturer at JNTUA-OTRI from 2010 to 2015. She then joined Sri Sathya Sai Institute of Higher Learning as an Assistant Professor at the Dept. of Food and Nutritional Sciences.",
     areasOfTeaching: [
@@ -222,7 +232,7 @@ const FACULTY_DETAILS = [
     email: "jhinukgupta@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "olive",
-    image: "https://www.sssihl.edu.in/wp-content/uploads/2020/02/SSSIHL-Faculty-Food-Nutritional-Sciences-Jhinuk_Gupta.jpg",
+    image: imgGupta,
     professionalPages: { linkedin: true, researchgate: false, googleScholar: true },
     overview: "Dr. (Mrs.) Jhinuk Gupta is an Organic Chemist with research experience in the field of Food Chemistry, Food Processing and Biomacromolecules. She is an alumni of Jadavpur University Kolkata (B.Sc. Chemistry, 2004) and Indian Institute of Technology, Madras (M.Sc. Chemistry, 2006). She completed her Ph.D. from National University of Singapore in 2011 in the field of Synthetic Polymer Chemistry. She has two post-doctoral research experiences in the field of value-added processing and food science from Kansas State University, USA and University of Nebraska-Lincoln, USA. She joined SSSIHL in June, 2019.",
     areasOfTeaching: [
@@ -256,14 +266,12 @@ export const Route = createFileRoute("/faculty")({
 });
 
 function FacultyPage() {
-  // Track selected faculty profile state for the popup window
   const [selectedFaculty, setSelectedFaculty] = useState<typeof FACULTY_DETAILS[0] | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader />
 
-      {/* Hero Banner Section */}
       <section className="container-page pt-16 pb-12 relative">
         <div aria-hidden className="absolute top-20 right-10 size-72 rounded-full bg-pomegranate/15 blur-3xl" />
         <div className="max-w-3xl relative animate-fade-up">
@@ -278,7 +286,6 @@ function FacultyPage() {
         </div>
       </section>
 
-      {/* Core Grid Matrix Layout */}
       <section className="container-page py-12">
         <div className="grid md:grid-cols-2 gap-6">
           {FACULTY_DETAILS.map((f, i) => (
@@ -312,7 +319,6 @@ function FacultyPage() {
         </div>
       </section>
 
-      {/* Doctoral Scholars Dashboard Panel */}
       <section className="bg-plum-deep text-cream py-20 mt-16">
         <div className="container-page">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 items-start">
@@ -335,12 +341,10 @@ function FacultyPage() {
         </div>
       </section>
 
-      {/* Profile Detail Overlay Sheet / Modal Window Component */}
       {selectedFaculty && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto backdrop-blur-md bg-plum-deep/40 animate-fade-in">
           <div className="relative bg-card w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden ring-1 ring-plum/10 animate-scale-up max-h-[90vh] flex flex-col">
             
-            {/* Modal Navigation Header Strip */}
             <div className="flex items-center justify-between p-6 border-b border-plum/10 shrink-0 bg-background">
               <div>
                 <h2 className="font-display text-2xl text-plum-deep">{selectedFaculty.name}</h2>
@@ -355,11 +359,9 @@ function FacultyPage() {
               </button>
             </div>
 
-            {/* Split Content Core Panel Container */}
             <div className="overflow-y-auto p-6 md:p-8 space-y-8 flex-1">
               <div className="grid md:grid-cols-[240px_1fr] gap-8 items-start">
                 
-                {/* Left Mini Column Panel: Identity / Visual Media Card */}
                 <div className="space-y-6 bg-muted/30 p-5 rounded-2xl border border-plum/5">
                   <div className="w-full aspect-square rounded-xl overflow-hidden shadow-md bg-card">
                     <img 
@@ -369,7 +371,6 @@ function FacultyPage() {
                     />
                   </div>
                   
-                  {/* Basic Dynamic Contact Card */}
                   <div className="space-y-3 text-xs">
                     <div>
                       <span className="block font-bold uppercase tracking-wider text-plum-deep/40 mb-1">Qualifications</span>
@@ -384,7 +385,6 @@ function FacultyPage() {
                       <span className="text-sm font-medium text-plum-deep/80">{selectedFaculty.telephone}</span>
                     </div>
                     
-                    {/* Professional Reference Hyperlinks Row */}
                     <div className="pt-2 border-t border-plum/10">
                       <span className="block font-bold uppercase tracking-wider text-plum-deep/40 mb-2">Academic Sheets</span>
                       <div className="flex flex-wrap gap-2 text-[11px]">
@@ -402,15 +402,12 @@ function FacultyPage() {
                   </div>
                 </div>
 
-                {/* Right Primary Column Panel: Long-Form Academic Details */}
                 <div className="space-y-6">
-                  {/* Executive Overview Section */}
                   <div>
                     <h4 className="font-display text-lg text-plum-deep mb-2 border-b border-plum/5 pb-1">Overview Biography</h4>
                     <p className="text-sm text-plum-deep/80 leading-relaxed text-justify">{selectedFaculty.overview}</p>
                   </div>
 
-                  {/* Areas of Teaching Array */}
                   <div>
                     <h4 className="font-display text-lg text-plum-deep mb-3 border-b border-plum/5 pb-1">Areas of Teaching</h4>
                     <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-2 text-sm text-plum-deep/75">
@@ -423,7 +420,6 @@ function FacultyPage() {
                     </ul>
                   </div>
 
-                  {/* Research Interests Array */}
                   <div>
                     <h4 className="font-display text-lg text-plum-deep mb-3 border-b border-plum/5 pb-1">Research & Technology Interests</h4>
                     <ul className="space-y-2 text-sm text-plum-deep/75">
@@ -436,7 +432,6 @@ function FacultyPage() {
                     </ul>
                   </div>
 
-                  {/* Active Capital Funded Projects Matrix (Conditionally Displayed) */}
                   {selectedFaculty.projects.length > 0 && (
                     <div>
                       <h4 className="font-display text-lg text-plum-deep mb-3 border-b border-plum/5 pb-1">Current Capital Projects</h4>
@@ -451,7 +446,6 @@ function FacultyPage() {
                     </div>
                   )}
 
-                  {/* Doctoral Research Candidates Supervision (Conditionally Displayed) */}
                   {selectedFaculty.phdSupervision.length > 0 && (
                     <div>
                       <h4 className="font-display text-lg text-plum-deep mb-3 border-b border-plum/5 pb-1">Current Ph.D. Supervision</h4>
