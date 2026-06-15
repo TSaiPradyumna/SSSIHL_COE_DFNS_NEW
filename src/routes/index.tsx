@@ -156,28 +156,50 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FACULTY PREVIEW */}
-      <section className="container-page py-24 lg:py-32">
-        <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 mb-16">
+      {/* FACULTY PREVIEW - Segmented Categories */}
+      <section className="container-page py-24 lg:py-32 space-y-16">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 border-b border-plum/10 pb-6">
           <div>
             <div className="text-[10px] uppercase tracking-[0.25em] text-sage font-bold mb-4">Academic Leadership</div>
             <h2 className="font-display text-4xl lg:text-5xl">Led by <span className="italic text-pomegranate">women scientists</span></h2>
           </div>
           <Link to="/faculty" className="text-sm font-bold uppercase tracking-widest text-plum hover:text-pomegranate flex items-center gap-2 group">
-            See full faculty <span className="group-hover:translate-x-1 transition-transform">→</span>
+            See full team directory <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {FACULTY.map((f, i) => (
-            <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
-              <div className={`size-14 rounded-2xl mb-5 grid place-items-center font-display italic text-2xl text-cream bg-${f.color}`}>
-                {f.name.split(" ").slice(-1)[0]?.[0]}
+
+        {/* Sub-Group 1: Core Faculty Matrix */}
+        <div className="space-y-6">
+          <h3 className="font-display text-2xl text-plum-deep border-b border-plum/5 pb-2">Core Faculty</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {FACULTY.filter(f => !["Prof. B Andallu", "Dr. Meera Manikkavachakan"].includes(f.name)).map((f, i) => (
+              <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
+                <div className={`size-14 rounded-2xl mb-5 grid place-items-center font-display italic text-2xl text-cream bg-${f.color}`}>
+                  {f.name.split(" ").slice(-1)[0]?.[0]}
+                </div>
+                <h4 className="font-display text-xl mb-2 leading-tight text-plum-deep">{f.name}</h4>
+                <p className="text-xs uppercase tracking-widest text-plum-deep/50 font-bold mb-4">{f.role}</p>
+                <p className="text-sm text-plum-deep/70 leading-relaxed">{f.bio}</p>
               </div>
-              <h4 className="font-display text-xl mb-2 leading-tight">{f.name}</h4>
-              <p className="text-xs uppercase tracking-widest text-plum-deep/50 font-bold mb-4">{f.role}</p>
-              <p className="text-sm text-plum-deep/70 leading-relaxed">{f.bio}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Sub-Group 2: Scientific Advisors Matrix */}
+        <div className="space-y-6">
+          <h3 className="font-display text-2xl text-plum-deep border-b border-plum/5 pb-2">Scientific Advisors</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {FACULTY.filter(f => ["Prof. B Andallu", "Dr. Meera Manikkavachakan"].includes(f.name)).map((f, i) => (
+              <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
+                <div className={`size-14 rounded-2xl mb-5 grid place-items-center font-display italic text-2xl text-cream bg-${f.color}`}>
+                  {f.name.split(" ").slice(-1)[0]?.[0]}
+                </div>
+                <h4 className="font-display text-xl mb-2 leading-tight text-plum-deep">{f.name}</h4>
+                <p className="text-xs uppercase tracking-widest text-plum-deep/50 font-bold mb-4">{f.role}</p>
+                <p className="text-sm text-plum-deep/70 leading-relaxed">{f.bio}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
