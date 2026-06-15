@@ -156,7 +156,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FACULTY PREVIEW - Segmented Categories */}
+      {/* FACULTY PREVIEW SECTION */}
       <section className="container-page py-24 lg:py-32 space-y-16">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 border-b border-plum/10 pb-6">
           <div>
@@ -168,7 +168,7 @@ function HomePage() {
           </Link>
         </div>
 
-        {/* Sub-Group 1: Core Faculty Matrix */}
+        {/* Category 1: Core Faculty Grid */}
         <div className="space-y-6">
           <h3 className="font-display text-2xl text-plum-deep border-b border-plum/5 pb-2">Core Faculty</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -185,7 +185,7 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Sub-Group 2: Scientific Advisors Matrix */}
+        {/* Category 2: Scientific Advisors Grid */}
         <div className="space-y-6">
           <h3 className="font-display text-2xl text-plum-deep border-b border-plum/5 pb-2">Scientific Advisors</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
