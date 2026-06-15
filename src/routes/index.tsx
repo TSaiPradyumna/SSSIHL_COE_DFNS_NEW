@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DomainCard } from "@/components/DomainCard";
-import { DOMAINS, FACULTY } from "@/lib/domains";
+import { DOMAINS } from "@/lib/domains";
 import heroRice from "@/assets/hero-rice.jpg";
 import heroSpices from "@/assets/hero-spices.jpg";
 
@@ -31,17 +31,69 @@ const ROADMAP = [
   { years: "Year 5", title: "Food Innovation Hub", body: "Support 100+ food startups. Develop export-ready technologies for South Asia.", color: "bg-sage" },
 ];
 
-function HomePage() {
-  // Safe fuzzy filtering logic looking strictly for keyword roots to bypass hidden space mismatches
-  const scientificAdvisors = FACULTY.filter(f => 
-    f.name.toLowerCase().includes("andallu") || 
-    f.name.toLowerCase().includes("meera")
-  );
+// Localized independent team matrix to bypass missing records in external files
+const HOME_TEAM_DATA = [
+  {
+    name: "Dr. M Srijaya",
+    role: "Associate Professor & Head",
+    category: "faculty",
+    color: "pomegranate",
+    bio: "Head of Food & Nutritional Sciences focusing on food processing, preservation and applied nutrition."
+  },
+  {
+    name: "Prof. N Srividya",
+    role: "Professor & Dean of Sciences",
+    category: "faculty",
+    color: "turmeric",
+    bio: "Dean of Sciences and active researcher in food science and nutrition with 25+ years of experience."
+  },
+  {
+    name: "Dr. A Sumana",
+    role: "Asst. Professor",
+    category: "faculty",
+    color: "olive",
+    bio: "Food Industry Consultant and regulatory expert working at the intersection of safety and entrepreneurship."
+  },
+  {
+    name: "Dr. Tapasya Anand",
+    role: "Asst. Professor",
+    category: "faculty",
+    color: "turmeric",
+    bio: "Faculty member in Food & Nutritional Sciences contributing to functional foods and nutrition research."
+  },
+  {
+    name: "Dr. Ambati Padmaja",
+    role: "Asst. Professor",
+    category: "faculty",
+    color: "plum",
+    bio: "Specializes in product development and sensory science. Awarded 3rd Place at FOODS 2019 for instant soup mix innovation."
+  },
+  {
+    name: "Dr. Jhinuk Gupta",
+    role: "Asst. Professor",
+    category: "faculty",
+    color: "olive",
+    bio: "Faculty member in Food & Nutritional Sciences with expertise in food technology and nutrition."
+  },
+  {
+    name: "Prof. B Andallu",
+    role: "Professor (Hon.)",
+    category: "advisor",
+    color: "plum",
+    bio: "Invited speaker at the 107th Indian Science Congress on the role of phytochemicals in healthcare."
+  },
+  {
+    name: "Dr. Meera Manikkavachakan",
+    role: "Asst. Professor / Scientific Advisor",
+    category: "advisor",
+    color: "pomegranate",
+    bio: "Active researcher in public nutrition, bioprocesses, and shelf-stability studies for multi-millet functional snack foods."
+  }
+];
 
-  const coreFaculty = FACULTY.filter(f => 
-    !f.name.toLowerCase().includes("andallu") && 
-    !f.name.toLowerCase().includes("meera")
-  );
+function HomePage() {
+  const coreFaculty = HOME_TEAM_DATA.filter(f => f.category === "faculty");
+  const scientificAdvisors = HOME_TEAM_DATA.filter(f => f.category === "advisor");
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -167,7 +219,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FACULTY PREVIEW - Segmented Categories */}
+      {/* FACULTY PREVIEW - Split Categories */}
       <section className="container-page py-24 lg:py-32 space-y-16">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 border-b border-plum/10 pb-6">
           <div>
