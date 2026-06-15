@@ -14,10 +14,11 @@ import imgMeera from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Ma
 import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Srividya.jpg";
 import imgTapasya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg";
 
-// Rich dataset using the local file imports
+// Expanded rich dataset with category markers
 const FACULTY_DETAILS = [
   {
     name: "Dr. M Srijaya",
+    category: "faculty",
     role: "Associate Professor & Head",
     qualifications: "M.Sc., Ph.D.",
     email: "msrijaya@sssihl.edu.in",
@@ -51,6 +52,7 @@ const FACULTY_DETAILS = [
   },
   {
     name: "Prof. N Srividya",
+    category: "faculty",
     role: "Professor & Dean of Sciences",
     qualifications: "M.Sc., Ph.D.",
     email: "nsrividya@sssihl.edu.in",
@@ -92,7 +94,8 @@ const FACULTY_DETAILS = [
   },
   {
     name: "Prof. B Andallu",
-    role: "Professor (Hon.)",
+    category: "advisor",
+    role: "Professor (Hon.) / Scientific Advisor",
     qualifications: "M.Sc., Ph.D.",
     email: "bandallu@sssihl.edu.in",
     telephone: "+91 8554 272567",
@@ -116,8 +119,9 @@ const FACULTY_DETAILS = [
   },
   {
     name: "Dr. A Sumana",
+    category: "faculty",
     role: "Asst. Professor",
-    qualifications: "M.Sc., Ph.D.",
+    qualifications: "M.Sc., Ph.Ph.D.",
     email: "asumana@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "olive",
@@ -147,7 +151,8 @@ const FACULTY_DETAILS = [
   },
   {
     name: "Dr. Meera Manikkavachakan",
-    role: "Asst. Professor",
+    category: "advisor",
+    role: "Asst. Professor / Scientific Advisor",
     qualifications: "M.Sc., Ph.D.",
     email: "meeram@sssihl.edu.in",
     telephone: "+91 8554 272567",
@@ -174,6 +179,7 @@ const FACULTY_DETAILS = [
   },
   {
     name: "Dr. Tapasya Anand",
+    category: "faculty",
     role: "Asst. Professor",
     qualifications: "M.Sc., Ph.D.",
     email: "tapasyaanand@sssihl.edu.in",
@@ -201,6 +207,7 @@ const FACULTY_DETAILS = [
   },
   {
     name: "Dr. Ambati Padmaja",
+    category: "faculty",
     role: "Asst. Professor",
     qualifications: "M.Sc., Ph.D.",
     email: "ambatipadmaja@sssihl.edu.in",
@@ -227,6 +234,7 @@ const FACULTY_DETAILS = [
   },
   {
     name: "Dr. Jhinuk Gupta",
+    category: "faculty",
     role: "Asst. Professor",
     qualifications: "M.Sc., Ph.D.",
     email: "jhinukgupta@sssihl.edu.in",
@@ -256,10 +264,10 @@ const FACULTY_DETAILS = [
 export const Route = createFileRoute("/faculty")({
   head: () => ({
     meta: [
-      { title: "Faculty & Scholars — SSSIHL Centre of Excellence" },
-      { name: "description", content: "Meet the women-led faculty and doctoral research scholars driving SSSIHL's Centre of Excellence in Food Processing & Preservation." },
-      { property: "og:title", content: "Faculty & Scholars — SSSIHL CoE" },
-      { property: "og:description", content: "Women-led food and nutrition research at SSSIHL." },
+      { title: "Team Directory — SSSIHL Centre of Excellence" },
+      { name: "description", content: "Meet the multi-disciplinary faculty and scientific advisors driving SSSIHL's Centre of Excellence." },
+      { property: "og:title", content: "Our Team — SSSIHL CoE" },
+      { property: "og:description", content: "Core Faculty and Scientific Advisors driving food science research." },
     ],
   }),
   component: FacultyPage,
@@ -268,27 +276,37 @@ export const Route = createFileRoute("/faculty")({
 function FacultyPage() {
   const [selectedFaculty, setSelectedFaculty] = useState<typeof FACULTY_DETAILS[0] | null>(null);
 
+  // Segmenting variables into their specific UI matrix groups
+  const coreFaculty = FACULTY_DETAILS.filter((item) => item.category === "faculty");
+  const scientificAdvisors = FACULTY_DETAILS.filter((item) => item.category === "advisor");
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader />
 
+      {/* Hero Header Presentation Banner */}
       <section className="container-page pt-16 pb-12 relative">
         <div aria-hidden className="absolute top-20 right-10 size-72 rounded-full bg-pomegranate/15 blur-3xl" />
         <div className="max-w-3xl relative animate-fade-up">
-          <div className="text-[10px] uppercase tracking-[0.25em] text-pomegranate font-bold mb-6">Academic Leadership</div>
+          <div className="text-[10px] uppercase tracking-[0.25em] text-pomegranate font-bold mb-6">Expert Directory</div>
           <h1 className="font-display text-5xl lg:text-7xl leading-[0.95] mb-6">
-            <span className="italic text-shimmer">Women</span> at the heart of food science.
+            Meet <span className="italic text-shimmer">Our Team</span> of Visionaries.
           </h1>
           <p className="text-lg text-plum-deep/70 leading-relaxed">
-            Our multi-disciplinary faculty combines decades of research with active mentorship of the
-            next generation of food scientists. Click on any profile card below to discover their extensive histories, published records, and projects.
+            Our multi-disciplinary assembly of core researchers and research advisors combine decades of active engineering, biochemical science, and applied nutrition expertise.
           </p>
         </div>
       </section>
 
-      <section className="container-page py-12">
+      {/* Primary Section: Core Faculty Members Matrix */}
+      <section className="container-page py-6">
+        <div className="border-b border-plum/10 pb-4 mb-10">
+          <h2 className="font-display text-3xl lg:text-4xl text-plum-deep">Core Faculty</h2>
+          <p className="text-sm text-plum-deep/60 mt-1">Academic leaders driving active instruction and direct laboratory guidance.</p>
+        </div>
+        
         <div className="grid md:grid-cols-2 gap-6">
-          {FACULTY_DETAILS.map((f, i) => (
+          {coreFaculty.map((f, i) => (
             <div 
               key={f.name} 
               onClick={() => setSelectedFaculty(f)}
@@ -319,6 +337,46 @@ function FacultyPage() {
         </div>
       </section>
 
+      {/* Secondary Section: Scientific Advisors Matrix */}
+      <section className="container-page py-12">
+        <div className="border-b border-plum/10 pb-4 mb-10">
+          <h2 className="font-display text-3xl lg:text-4xl text-plum-deep">Scientific Advisors</h2>
+          <p className="text-sm text-plum-deep/60 mt-1">Eminent research specialists and natural product isolators providing critical research counseling.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {scientificAdvisors.map((f, i) => (
+            <div 
+              key={f.name} 
+              onClick={() => setSelectedFaculty(f)}
+              className="bg-card rounded-3xl p-8 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up cursor-pointer group"
+              style={{ animationDelay: `${i * 0.05}s` }}
+            >
+              <div className="flex flex-col sm:flex-row items-start gap-6">
+                <div className="size-20 rounded-3xl overflow-hidden shrink-0 shadow-lg bg-muted border border-plum/10">
+                  <img 
+                    src={f.image} 
+                    alt={f.name} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-display text-2xl mb-1 leading-tight group-hover:text-pomegranate transition-colors">{f.name}</h3>
+                  <p className="text-xs uppercase tracking-[0.15em] text-plum-deep/55 font-bold mb-3">{f.role}</p>
+                  <p className="text-sm font-medium text-plum-deep/80 mb-2">Qualifications: <span className="text-plum-deep/60">{f.qualifications}</span></p>
+                  <p className="text-plum-deep/75 text-sm leading-relaxed line-clamp-3">{f.overview}</p>
+                  <span className="inline-flex items-center text-xs font-semibold text-pomegranate mt-4 group-hover:translate-x-1 transition-transform">
+                    View Complete Profile &rarr;
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Doctoral Scholars Dashboard Panel */}
       <section className="bg-plum-deep text-cream py-20 mt-16">
         <div className="container-page">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 items-start">
@@ -341,6 +399,7 @@ function FacultyPage() {
         </div>
       </section>
 
+      {/* Profile Detail Popup Sheet Modal Component */}
       {selectedFaculty && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto backdrop-blur-md bg-plum-deep/40 animate-fade-in">
           <div className="relative bg-card w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden ring-1 ring-plum/10 animate-scale-up max-h-[90vh] flex flex-col">
