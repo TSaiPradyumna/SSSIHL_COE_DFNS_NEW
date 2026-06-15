@@ -9,16 +9,21 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ResearchRouteImport } from './routes/research'
 import { Route as PublicationsRouteImport } from './routes/publications'
 import { Route as FacultyRouteImport } from './routes/faculty'
 import { Route as DomainsRouteImport } from './routes/domains'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CollaborationRouteImport } from './routes/collaboration'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DomainsIndexRouteImport } from './routes/domains.index'
 import { Route as DomainsSlugRouteImport } from './routes/domains.$slug'
 
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PublicationsRoute = PublicationsRouteImport.update({
   id: '/publications',
   path: '/publications',
@@ -37,11 +42,6 @@ const DomainsRoute = DomainsRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CollaborationRoute = CollaborationRouteImport.update({
-  id: '/collaboration',
-  path: '/collaboration',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -68,21 +68,21 @@ const DomainsSlugRoute = DomainsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/collaboration': typeof CollaborationRoute
   '/contact': typeof ContactRoute
   '/domains': typeof DomainsRouteWithChildren
   '/faculty': typeof FacultyRoute
   '/publications': typeof PublicationsRoute
+  '/research': typeof ResearchRoute
   '/domains/$slug': typeof DomainsSlugRoute
   '/domains/': typeof DomainsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/collaboration': typeof CollaborationRoute
   '/contact': typeof ContactRoute
   '/faculty': typeof FacultyRoute
   '/publications': typeof PublicationsRoute
+  '/research': typeof ResearchRoute
   '/domains/$slug': typeof DomainsSlugRoute
   '/domains': typeof DomainsIndexRoute
 }
@@ -90,11 +90,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/collaboration': typeof CollaborationRoute
   '/contact': typeof ContactRoute
   '/domains': typeof DomainsRouteWithChildren
   '/faculty': typeof FacultyRoute
   '/publications': typeof PublicationsRoute
+  '/research': typeof ResearchRoute
   '/domains/$slug': typeof DomainsSlugRoute
   '/domains/': typeof DomainsIndexRoute
 }
@@ -103,32 +103,32 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
-    | '/collaboration'
     | '/contact'
     | '/domains'
     | '/faculty'
     | '/publications'
+    | '/research'
     | '/domains/$slug'
     | '/domains/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/collaboration'
     | '/contact'
     | '/faculty'
     | '/publications'
+    | '/research'
     | '/domains/$slug'
     | '/domains'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/collaboration'
     | '/contact'
     | '/domains'
     | '/faculty'
     | '/publications'
+    | '/research'
     | '/domains/$slug'
     | '/domains/'
   fileRoutesById: FileRoutesById
@@ -136,15 +136,22 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  CollaborationRoute: typeof CollaborationRoute
   ContactRoute: typeof ContactRoute
   DomainsRoute: typeof DomainsRouteWithChildren
   FacultyRoute: typeof FacultyRoute
   PublicationsRoute: typeof PublicationsRoute
+  ResearchRoute: typeof ResearchRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/publications': {
       id: '/publications'
       path: '/publications'
@@ -171,13 +178,6 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/collaboration': {
-      id: '/collaboration'
-      path: '/collaboration'
-      fullPath: '/collaboration'
-      preLoaderRoute: typeof CollaborationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -227,11 +227,11 @@ const DomainsRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  CollaborationRoute: CollaborationRoute,
   ContactRoute: ContactRoute,
   DomainsRoute: DomainsRouteWithChildren,
   FacultyRoute: FacultyRoute,
   PublicationsRoute: PublicationsRoute,
+  ResearchRoute: ResearchRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

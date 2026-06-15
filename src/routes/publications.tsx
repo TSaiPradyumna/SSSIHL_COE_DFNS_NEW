@@ -137,8 +137,8 @@ function PublicationsPage() {
             <div className="text-[10px] uppercase tracking-[0.25em] text-sage font-bold mb-4">Publication catalogue</div>
             <h2 className="font-display text-4xl">Filtered Publication Index</h2>
           </div>
-          {/* ✅ FIXED ROUTE LINK BELOW: Changed from /research to /collaboration */}
-          <Link to="/collaboration" className="inline-flex items-center gap-2 rounded-full border border-plum/20 px-5 py-3 text-sm text-plum-deep hover:bg-plum/5 transition-all">
+          {/* ✅ FIXED: Reverted back from /collaboration to /research to align with internal types */}
+          <Link to="/research" className="inline-flex items-center gap-2 rounded-full border border-plum/20 px-5 py-3 text-sm text-plum-deep hover:bg-plum/5 transition-all">
             View collaborations page
           </Link>
         </div>
