@@ -9,7 +9,7 @@ export const Route = createFileRoute("/research")({
       { title: "Collaborations — SSSIHL Centre of Excellence" },
       { name: "description", content: "Active institutional and industrial alliances driving SSSIHL's Department of Food & Nutritional Sciences." },
       { property: "og:title", content: "Collaborations — SSSIHL CoE" },
-      { property: "og:description", content: "Strategic partnerships with CSIR-CFTRI, ICMR, and emerging corporate pipelines." },
+      { property: "og:description", content: "Strategic partnerships with CSIR-CFTRI and emerging corporate pipelines." },
     ],
   }),
   component: CollaborationPage,
@@ -17,7 +17,6 @@ export const Route = createFileRoute("/research")({
 
 const COLLABORATIONS = [
   {
-    color: "basil",
     title: "CSIR - Central Food Technological Research Institute (CFTRI)",
     subtitle: "Joint Research & Academic Knowledge Exchange Alliance",
     funder: "Institutional Partnership (Mysuru)",
@@ -31,38 +30,6 @@ const COLLABORATIONS = [
       "Scientist-student mentorship exchanges and specialized technical workshops",
     ],
     impact: "Accelerates laboratory-to-market translation of food technologies. Bridging scholastic baseline formulations with commercial-scale processing paradigms benefits rural micro-enterprises.",
-  },
-  {
-    color: "pomegranate",
-    title: "Antidiabetic evaluation of Indian pigmented rice varieties",
-    subtitle: "A mechanistic metabolomic based approach",
-    funder: "Indian Council of Medical Research (ICMR)",
-    amount: "₹24 Lakhs",
-    period: "Completed Project Integration",
-    pi: "Dr. (Miss) N Srividya",
-    body: "Pigmented rice varieties contain functional phenolic acids and anthocyanins with therapeutic potential. This project combined food metabolomics, in vitro enzyme assays, and in vivo models to investigate antidiabetic pathways and mechanism profiles.",
-    deliverables: [
-      "Mechanistic insight into anti-hyperglycemic action of pigmented rice lines",
-      "Glycemic response profile mapping of indigenous native cultivars",
-      "Pigmented-rice based convenience foods for preventative therapeutic design",
-    ],
-    impact: "Rice consumption remains critical globally. Gluten-free pigmented rice functional foods offer a highly-accepted, culturally compatible lifestyle-disease intervention standard across Asia.",
-  },
-  {
-    color: "saffron",
-    title: "XRF based profiling of essential minerals",
-    subtitle: "In native and bio-processed pigmented rice",
-    funder: "UGC-DAE-Consortium",
-    amount: "₹45,000",
-    period: "Research Integration",
-    pi: "Dr. (Miss) N Srividya",
-    body: "Using Energy Dispersive X-ray Fluorescence (EDXRF) to meticulously map essential trace minerals — Fe, Zn, Ca, Mg — in Indian pigmented rice varieties, evaluating how soaking, fermentation, and germination improve bio-accessibility parameters.",
-    deliverables: [
-      "Identification of elite mineral-dense local pigmented rice varieties",
-      "Effect of advanced bioprocessing on mineral retention and elemental mapping distribution",
-      "Improved mineral bioavailability models validated via in vitro digestion systems",
-    ],
-    impact: "Provides an actionable, low-cost dietary strategy to address 'hidden hunger' and micronutrient deficiencies affecting vulnerable populations lacking access to chemical fortification.",
   },
 ];
 
@@ -79,39 +46,51 @@ function CollaborationPage() {
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader />
 
-      {/* Hero Intro Section */}
+      {/* Hero Header Introduction */}
       <section className="container-page pt-16 pb-12 relative">
-        <div aria-hidden className="absolute top-20 right-0 size-72 rounded-full bg-basil/15 blur-3xl" />
+        <div aria-hidden className="absolute top-20 right-0 size-72 rounded-full bg-plum/15 blur-3xl" />
         <div className="max-w-3xl relative animate-fade-up">
           <div className="text-[10px] uppercase tracking-[0.25em] text-pomegranate font-bold mb-6">Synergistic Network</div>
           <h1 className="font-display text-5xl lg:text-7xl leading-[0.95] mb-6">
             Alliances that <span className="italic text-shimmer">drive innovation.</span>
           </h1>
           <p className="text-lg text-plum-deep/70 leading-relaxed">
-            By combining our academic foundations with national laboratories like CSIR-CFTRI, state networks, and forward-thinking corporate operations, we create functional answers to community nutrition challenges.
+            By combining our academic foundations with premier national laboratories like CSIR-CFTRI and forward-thinking corporate operations, we create functional answers to community nutrition challenges.
           </p>
         </div>
       </section>
 
-      {/* Active & Established Frameworks Section */}
+      {/* Section 1: Active Partnerships (With Fixed High-Contrast Black Text Styling) */}
       <section className="container-page py-6 space-y-8">
         <div className="border-b border-plum/10 pb-4 mb-6">
           <h2 className="font-display text-3xl lg:text-4xl text-plum-deep">Established Partnerships & Grants</h2>
-          <p className="text-sm text-plum-deep/60 mt-1">Core institutional projects backed by active infrastructure support and federal funding resources.</p>
+          <p className="text-sm text-plum-deep/60 mt-1">Core institutional collaborations backed by active infrastructure support and resource networks.</p>
         </div>
 
         {COLLABORATIONS.map((p, i) => (
           <article key={p.title} className="bg-card rounded-[32px] ring-1 ring-plum/10 overflow-hidden hover:shadow-2xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
-            <div className={`bg-${p.color} text-cream p-8 lg:p-12`}>
-              <div className="text-[10px] uppercase tracking-[0.25em] font-bold mb-3 opacity-80">{p.funder} • {p.amount} • {p.period}</div>
-              <h2 className="font-display text-3xl lg:text-4xl leading-tight mb-2">{p.title}</h2>
-              <p className="font-display italic text-xl opacity-90">{p.subtitle}</p>
-              <div className="mt-6 inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cream/15 backdrop-blur ring-1 ring-cream/20">
-                <span className="size-2 rounded-full bg-turmeric" />
-                <span className="text-sm font-medium">Alliance Anchor / PI: {p.pi}</span>
+            
+            {/* Redesigned Content Banner with crisp dark text values for perfect readability */}
+            <div className="bg-plum-deep/[0.03] border-b border-plum/10 p-8 lg:p-12 text-black">
+              <div className="text-[10px] uppercase tracking-[0.25em] font-bold mb-3 text-pomegranate">
+                {p.funder} • {p.amount} • {p.period}
+              </div>
+              <h2 className="font-display text-3xl lg:text-4xl leading-tight mb-2 text-plum-deep font-bold">
+                {p.title}
+              </h2>
+              <p className="font-display italic text-xl text-plum-deep/80">
+                {p.subtitle}
+              </p>
+              <div className="mt-6 inline-flex items-center gap-3 px-4 py-2 rounded-full bg-plum-deep/5 ring-1 ring-plum-deep/10">
+                <span className="size-2 rounded-full bg-pomegranate" />
+                <span className="text-sm font-medium text-plum-deep/90">
+                  Alliance Anchor / PI: {p.pi}
+                </span>
               </div>
             </div>
-            <div className="p-8 lg:p-12 grid lg:grid-cols-3 gap-10">
+
+            {/* Split Panel Body Content */}
+            <div className="p-8 lg:p-12 grid lg:grid-cols-3 gap-10 bg-card">
               <div className="lg:col-span-2">
                 <p className="text-plum-deep/80 leading-relaxed text-lg mb-8">{p.body}</p>
                 <div className="text-[10px] uppercase tracking-[0.22em] text-pomegranate font-bold mb-3">Key Structural Deliverables</div>
@@ -133,7 +112,7 @@ function CollaborationPage() {
         ))}
       </section>
 
-      {/* Upcoming Alliances Pipeline Section */}
+      {/* Section 2: Upcoming Strategic Pipelines */}
       <section className="container-page py-16 animate-fade-up">
         <div className="border-b border-plum/10 pb-4 mb-10">
           <h2 className="font-display text-3xl lg:text-4xl text-plum-deep">Upcoming Collaborations</h2>
@@ -165,7 +144,7 @@ function CollaborationPage() {
         </div>
       </section>
 
-      {/* Statistics Dashboard Banner */}
+      {/* Summary Matrix Grid Footer Banner */}
       <section className="container-page pb-24">
         <div className="rounded-[32px] bg-plum-deep text-cream p-10 lg:p-14 grid md:grid-cols-3 gap-8 text-center">
           <div>
