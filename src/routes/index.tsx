@@ -48,7 +48,7 @@ function HomePage() {
                 <span className="animate-ping absolute inline-flex size-full rounded-full bg-sage opacity-75" />
                 <span className="relative inline-flex size-2 rounded-full bg-sage" />
               </span>
-              Established 2024 • SSSIHL
+              Established 2026 • SSSIHL
             </div>
             <h1 className="font-display text-5xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight mb-8">
               Where <span className="italic text-shimmer">Science</span><br />
