@@ -14,7 +14,7 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="font-display italic text-2xl leading-snug mb-6 text-cream/90">
-            Food Processing & Preservation — translational research with a women-first mandate.
+            Smart Food Systems — translational research with a women-first mandate.
           </p>
           <address className="not-italic text-sm leading-relaxed text-cream/70">
             Department of Food & Nutritional Sciences<br />

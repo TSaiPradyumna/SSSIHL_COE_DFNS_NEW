@@ -6,7 +6,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — SSSIHL Centre of Excellence" },
-      { name: "description", content: "Partner with the SSSIHL Centre of Excellence in Food Processing & Preservation. Department of Food & Nutritional Sciences, Anantapur." },
+      { name: "description", content: "Partner with the SSSIHL Centre of Excellence in Smart Food Systems. Department of Food & Nutritional Sciences, Anantapur." },
       { property: "og:title", content: "Contact — SSSIHL CoE" },
       { property: "og:description", content: "Get in touch with the Department of Food & Nutritional Sciences at SSSIHL." },
     ],

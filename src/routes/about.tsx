@@ -6,7 +6,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "Vision & Mission — SSSIHL Centre of Excellence" },
-      { name: "description", content: "The vision, mission and mandate of SSSIHL's Centre of Excellence in Food Processing & Preservation." },
+      { name: "description", content: "The vision, mission and mandate of SSSIHL's Centre of Excellence in Smart Food Systems." },
       { property: "og:title", content: "Vision & Mission — SSSIHL Centre of Excellence" },
       { property: "og:description", content: "Translational food research with a women-first mandate." },
     ],

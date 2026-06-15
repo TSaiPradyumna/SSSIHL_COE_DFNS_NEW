@@ -77,10 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SSSIHL Centre of Excellence — Food Processing & Preservation" },
+      { title: "SSSIHL Centre of Excellence — Smart Food Systems" },
       { name: "description", content: "Translational research in food and nutritional sciences at Sri Sathya Sai Institute of Higher Learning — eight flagship domains, women-led innovation, startup incubation." },
       { name: "author", content: "SSSIHL Department of Food & Nutritional Sciences" },
-      { property: "og:title", content: "SSSIHL Centre of Excellence — Food Processing & Preservation" },
+      { property: "og:title", content: "SSSIHL Centre of Excellence — Smart Food Systems" },
       { property: "og:description", content: "Translational food science with a women-first mandate at SSSIHL." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

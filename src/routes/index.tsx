@@ -9,9 +9,9 @@ import heroSpices from "@/assets/hero-spices.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SSSIHL Centre of Excellence — Food Processing & Preservation" },
+      { title: "SSSIHL Centre of Excellence — Smart Food Systems" },
       { name: "description", content: "Eight flagship research domains in translational food science, women-led innovation and startup incubation at SSSIHL." },
-      { property: "og:title", content: "SSSIHL Centre of Excellence — Food Processing & Preservation" },
+      { property: "og:title", content: "SSSIHL Centre of Excellence — Smart Food Systems" },
       { property: "og:description", content: "Translational food science with a women-first mandate at SSSIHL." },
     ],
   }),
@@ -55,7 +55,7 @@ function HomePage() {
               Meets <span className="italic text-pomegranate">Sustenance.</span>
             </h1>
             <p className="text-lg text-plum-deep/70 leading-relaxed max-w-xl mb-10">
-              The Centre of Excellence in Food Processing & Preservation bridges ancient Indian wisdom with
+              The Centre of Excellence in Smart Food Systems bridges ancient Indian wisdom with
               modern nutritional precision — led by women researchers, translating laboratory breakthroughs
               into community-wide health and financial empowerment.
             </p>
