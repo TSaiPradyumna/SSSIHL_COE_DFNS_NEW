@@ -32,6 +32,17 @@ const ROADMAP = [
 ];
 
 function HomePage() {
+  // Safe fuzzy filtering logic looking strictly for keyword roots to bypass hidden space mismatches
+  const scientificAdvisors = FACULTY.filter(f => 
+    f.name.toLowerCase().includes("andallu") || 
+    f.name.toLowerCase().includes("meera")
+  );
+
+  const coreFaculty = FACULTY.filter(f => 
+    !f.name.toLowerCase().includes("andallu") && 
+    !f.name.toLowerCase().includes("meera")
+  );
+
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
@@ -52,7 +63,7 @@ function HomePage() {
             </div>
             <h1 className="font-display text-5xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight mb-8">
               Where <span className="italic text-shimmer">Science</span><br />
-              Meets <span className="italic text-pomegranate">Sustenance.</span>
+              Me Meets <span className="italic text-pomegranate">Sustenance.</span>
             </h1>
             <p className="text-lg text-plum-deep/70 leading-relaxed max-w-xl mb-10">
               The Centre of Excellence in Smart Food Systems bridges ancient Indian wisdom with
@@ -156,7 +167,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FACULTY PREVIEW SECTION */}
+      {/* FACULTY PREVIEW - Segmented Categories */}
       <section className="container-page py-24 lg:py-32 space-y-16">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 border-b border-plum/10 pb-6">
           <div>
@@ -168,11 +179,11 @@ function HomePage() {
           </Link>
         </div>
 
-        {/* Category 1: Core Faculty Grid */}
+        {/* Sub-Group 1: Core Faculty Matrix */}
         <div className="space-y-6">
           <h3 className="font-display text-2xl text-plum-deep border-b border-plum/5 pb-2">Core Faculty</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {FACULTY.filter(f => !["Prof. B Andallu", "Dr. Meera Manikkavachakan"].includes(f.name)).map((f, i) => (
+            {coreFaculty.map((f, i) => (
               <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
                 <div className={`size-14 rounded-2xl mb-5 grid place-items-center font-display italic text-2xl text-cream bg-${f.color}`}>
                   {f.name.split(" ").slice(-1)[0]?.[0]}
@@ -185,11 +196,11 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Category 2: Scientific Advisors Grid */}
+        {/* Sub-Group 2: Scientific Advisors Matrix */}
         <div className="space-y-6">
           <h3 className="font-display text-2xl text-plum-deep border-b border-plum/5 pb-2">Scientific Advisors</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {FACULTY.filter(f => ["Prof. B Andallu", "Dr. Meera Manikkavachakan"].includes(f.name)).map((f, i) => (
+            {scientificAdvisors.map((f, i) => (
               <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
                 <div className={`size-14 rounded-2xl mb-5 grid place-items-center font-display italic text-2xl text-cream bg-${f.color}`}>
                   {f.name.split(" ").slice(-1)[0]?.[0]}
