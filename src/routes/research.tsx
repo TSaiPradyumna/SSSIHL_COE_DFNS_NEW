@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-export const Route = createFileRoute("/collaboration")({
+export const Route = createFileRoute("/research")({
   head: () => ({
     meta: [
       { title: "Collaborations — SSSIHL Centre of Excellence" },
@@ -79,6 +79,7 @@ function CollaborationPage() {
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader />
 
+      {/* Hero Intro Section */}
       <section className="container-page pt-16 pb-12 relative">
         <div aria-hidden className="absolute top-20 right-0 size-72 rounded-full bg-basil/15 blur-3xl" />
         <div className="max-w-3xl relative animate-fade-up">
@@ -92,6 +93,7 @@ function CollaborationPage() {
         </div>
       </section>
 
+      {/* Active & Established Frameworks Section */}
       <section className="container-page py-6 space-y-8">
         <div className="border-b border-plum/10 pb-4 mb-6">
           <h2 className="font-display text-3xl lg:text-4xl text-plum-deep">Established Partnerships & Grants</h2>
@@ -131,6 +133,7 @@ function CollaborationPage() {
         ))}
       </section>
 
+      {/* Upcoming Alliances Pipeline Section */}
       <section className="container-page py-16 animate-fade-up">
         <div className="border-b border-plum/10 pb-4 mb-10">
           <h2 className="font-display text-3xl lg:text-4xl text-plum-deep">Upcoming Collaborations</h2>
@@ -162,6 +165,7 @@ function CollaborationPage() {
         </div>
       </section>
 
+      {/* Statistics Dashboard Banner */}
       <section className="container-page pb-24">
         <div className="rounded-[32px] bg-plum-deep text-cream p-10 lg:p-14 grid md:grid-cols-3 gap-8 text-center">
           <div>
