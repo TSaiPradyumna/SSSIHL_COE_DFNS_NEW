@@ -115,7 +115,7 @@ function HomePage() {
             </div>
             <h1 className="font-display text-5xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight mb-8">
               Where <span className="italic text-shimmer">Science</span><br />
-              Me Meets <span className="italic text-pomegranate">Sustenance.</span>
+              Meets <span className="italic text-pomegranate">Sustenance.</span>
             </h1>
             <p className="text-lg text-plum-deep/70 leading-relaxed max-w-xl mb-10">
               The Centre of Excellence in Smart Food Systems bridges ancient Indian wisdom with
@@ -174,7 +174,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED PROJECT */}
+      {/* FEATURED STARTUP SPOTLIGHT (Replaced Pigmented Rice Research) */}
       <section className="bg-plum-deep text-cream py-24 lg:py-32 relative overflow-hidden">
         <div aria-hidden className="absolute top-10 right-10 size-72 border border-turmeric/20 rounded-full animate-spin-slow" />
         <div aria-hidden className="absolute bottom-10 left-10 size-48 border border-pomegranate/30 rounded-full animate-spin-slow" style={{ animationDirection: "reverse" }} />
@@ -183,24 +183,23 @@ function HomePage() {
           <div className="relative">
             <img src={heroSpices} alt="Spices in scientific glassware" width={1024} height={1280} loading="lazy" className="rounded-[40px] aspect-[4/5] object-cover shadow-2xl" />
             <div className="absolute -bottom-6 -right-6 bg-turmeric text-plum-deep p-5 rounded-2xl shadow-xl max-w-[200px]">
-              <div className="text-xs font-bold uppercase tracking-widest mb-1">ICMR Funded</div>
-              <div className="font-display italic text-2xl leading-tight">₹24 Lakhs</div>
+              <div className="text-xs font-bold uppercase tracking-widest mb-1">Incubated Entity</div>
+              <div className="font-display italic text-2xl leading-tight">RoC Vijayawada</div>
             </div>
           </div>
           <div>
-            <h4 className="text-turmeric text-[10px] font-bold uppercase tracking-[0.25em] mb-4">Research Spotlight</h4>
+            <h4 className="text-turmeric text-[10px] font-bold uppercase tracking-[0.25em] mb-4">Startup Incubation Spotlight</h4>
             <h2 className="font-display text-4xl lg:text-5xl leading-tight mb-6">
-              Antidiabetic potential of <span className="italic">Indian pigmented rice</span>
+              Padmakriti Innovations <span className="italic">Private Limited</span>
             </h2>
             <p className="text-cream/70 text-lg leading-relaxed mb-8">
-              A mechanistic, metabolomic approach to understanding how phenolic acids and anthocyanins
-              in heritage rice varieties can manage glycemic response and reduce diabetes risk across Asia.
+              An active manufacturing and processing enterprise translating lab breakthroughs into scalable commercial avenues, focusing on clean-label semi-processed configurations, convenience systems, and ready-to-eat specialty food matrix innovations.
             </p>
             <ul className="space-y-4 mb-10">
               {[
-                "Metabolomic profiling of phenolics & anthocyanins",
-                "Glycemic response evaluation in vivo",
-                "Gluten-free therapeutic convenience foods",
+                "Semi-processed, instant & specialty food products",
+                "CIN: U10799AP2025PTC121377 | Incorporated Sept 20, 2025",
+                "Registered Hub: Puttaparthi, Ananthapur, Andhra Pradesh",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-4">
                   <span className="size-6 rounded-full bg-sage/30 ring-1 ring-sage grid place-items-center text-xs mt-0.5">✓</span>
@@ -209,10 +208,10 @@ function HomePage() {
               ))}
             </ul>
             <div className="flex items-center gap-4 p-5 rounded-2xl bg-cream/5 border border-cream/10 backdrop-blur w-fit">
-              <div className="size-12 bg-pomegranate rounded-full grid place-items-center font-display italic text-cream">Dr</div>
+              <div className="size-12 bg-pomegranate rounded-full grid place-items-center font-display italic text-cream font-bold">Co</div>
               <div>
-                <div className="font-semibold">Dr. (Miss) N Srividya</div>
-                <div className="text-xs text-cream/60 uppercase tracking-widest">Principal Investigator</div>
+                <div className="font-semibold text-sm sm:text-base">Mounika Pandey • Srividya Nagarajan</div>
+                <div className="text-xs text-cream/60 uppercase tracking-widest mt-0.5">Company Directors & Leadership</div>
               </div>
             </div>
           </div>
