@@ -97,35 +97,16 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Dedicated Vision & Institutional Core Identity Cards */}
-      <section className="container-page py-12 animate-fade-up">
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 bg-card rounded-[32px] ring-1 ring-plum/10 p-8 lg:p-12 shadow-sm">
-          {/* Institutional Anchor */}
-          <div className="flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-plum/10 pb-6 lg:pb-0 lg:pr-8">
-            <div>
-              <div className="text-[11px] uppercase tracking-[0.2em] text-pomegranate font-bold mb-3">Institutional Anchor</div>
-              <h2 className="font-display text-3xl text-plum-deep mb-4">Aum Sri Sai Ram</h2>
-              <div className="space-y-1 text-sm text-plum-deep/80 font-medium">
-                <p>Department of Food and Nutritional Sciences</p>
-                <p className="text-plum-deep/60">Sri Sathya Sai Institute of Higher Learning</p>
-                <p className="text-xs uppercase tracking-wider text-pomegranate/80 bg-pomegranate/5 px-2.5 py-1 rounded-md w-fit mt-2 font-bold ring-1 ring-pomegranate/10">
-                  Anantapur Campus
-                </p>
-              </div>
-            </div>
-            <div className="text-xs text-plum-deep/40 mt-8 font-mono">
-              CoE-SFS Framework • Established Baseline
-            </div>
+      {/* Dedicated Centered Vision Card Section (Removed Institutional Anchor Block) */}
+      <section className="container-page py-10 animate-fade-up">
+        <div className="bg-card rounded-[32px] ring-1 ring-plum/10 p-8 lg:p-12 shadow-sm max-w-4xl mx-auto">
+          <div className="text-[11px] uppercase tracking-[0.2em] text-basil font-bold mb-3 text-center">
+            Core Objective Mandate
           </div>
-
-          {/* Central Core Aim */}
-          <div className="lg:pl-4 flex flex-col justify-center">
-            <div className="text-[11px] uppercase tracking-[0.2em] text-basil font-bold mb-3">Core Objective Mandate</div>
-            <h3 className="font-display text-2xl text-plum-deep mb-4">Vision & Core Strategic Aim</h3>
-            <blockquote className="border-l-4 border-pomegranate pl-5 italic text-plum-deep/80 text-lg leading-relaxed bg-plum-deep/[0.01] py-3 pr-2 rounded-r-xl">
-              "The department intends to establish a center of excellence in food processing and preservation, drawing from its extensive research experience in various food processing methods and ensuring the stability of the resulting products during storage."
-            </blockquote>
-          </div>
+          <h3 className="font-display text-3xl text-plum-deep text-center mb-6">Vision & Core Strategic Aim</h3>
+          <blockquote className="border-l-4 border-pomegranate pl-6 italic text-plum-deep/80 text-lg lg:text-xl leading-relaxed bg-plum-deep/[0.01] py-4 max-w-3xl mx-auto rounded-r-xl">
+            "The department intends to establish a center of excellence in food processing and preservation, drawing from its extensive research experience in various food processing methods and ensuring the stability of the resulting products during storage."
+          </blockquote>
         </div>
       </section>
 
