@@ -105,7 +105,7 @@ function AboutPage() {
           </div>
           <h3 className="font-display text-3xl text-plum-deep text-center mb-6">Vision & Core Strategic Aim</h3>
           <blockquote className="border-l-4 border-pomegranate pl-6 italic text-plum-deep/80 text-lg lg:text-xl leading-relaxed bg-plum-deep/[0.01] py-4 max-w-3xl mx-auto rounded-r-xl">
-            "The department intends to establish a center of excellence in food processing and preservation, drawing from its extensive research experience in various food processing methods and ensuring the stability of the resulting products during storage."
+            "The department intends to establish a center of excellence in Smart Food Systems, drawing from its extensive research experience in various food processing methods and ensuring the stability of the resulting products during storage."
           </blockquote>
         </div>
       </section>

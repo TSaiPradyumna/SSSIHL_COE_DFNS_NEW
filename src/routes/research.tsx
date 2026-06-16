@@ -22,7 +22,6 @@ const COLLABORATIONS = [
     funder: "Institutional Partnership (Mysuru)",
     amount: "Strategic MOU",
     period: "Active Exchange",
-    pi: "Department Faculty Coordination Matrix",
     body: "This premier institutional partnership allows SSSIHL doctoral scholars and post-graduate students to leverage state-of-the-art pilot processing plants and high-end industrial analytical instrumentation at CFTRI Mysuru. Joint frameworks focus on solving structural property changes in processed organic foods, advanced rheology, and validation of novel food engineering methods.",
     deliverables: [
       "Direct laboratory and instrumentation access to advanced pilot processing equipment",
@@ -60,7 +59,7 @@ function CollaborationPage() {
         </div>
       </section>
 
-      {/* Section 1: Active Partnerships (With Fixed High-Contrast Black Text Styling) */}
+      {/* Section 1: Active Partnerships */}
       <section className="container-page py-6 space-y-8">
         <div className="border-b border-plum/10 pb-4 mb-6">
           <h2 className="font-display text-3xl lg:text-4xl text-plum-deep">Established Partnerships & Grants</h2>
@@ -81,12 +80,6 @@ function CollaborationPage() {
               <p className="font-display italic text-xl text-plum-deep/80">
                 {p.subtitle}
               </p>
-              <div className="mt-6 inline-flex items-center gap-3 px-4 py-2 rounded-full bg-plum-deep/5 ring-1 ring-plum-deep/10">
-                <span className="size-2 rounded-full bg-pomegranate" />
-                <span className="text-sm font-medium text-plum-deep/90">
-                  Alliance Anchor / PI: {p.pi}
-                </span>
-              </div>
             </div>
 
             {/* Split Panel Body Content */}
