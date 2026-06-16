@@ -25,263 +25,195 @@ export type Domain = {
 
 export const DOMAINS: Domain[] = [
   {
-    slug: "cereal-millet-grain",
+    slug: "millet-ancient-grain-technology",
     number: "01",
-    title: "Cereal, Millet & Ancient Grain Technology",
-    short: "Reviving heritage grains for modern metabolic health.",
+    title: "Millet & Ancient Grain Technology",
+    short: "Unlocking the full nutritional and functional potential of heritage Indian millets.",
     emoji: "🌾",
     color: "saffron",
     image: milletImg,
     overview:
-      "Rediscovering the nutritional power of millets, pigmented rice and indigenous grains through processing, fortification and product development geared toward lifestyle disease prevention.",
+      "Advanced structural processing and characterization of small millets to engineer health-focused food delivery mechanisms aimed at mitigating widespread metabolic imbalances.",
     focus: [
-      "Pigmented rice processing & metabolomic profiling",
-      "Millet-based convenience and therapeutic foods",
-      "Bio-processing: soaking, germination, fermentation",
-      "Mineral bioavailability & glycemic index studies",
+      "Millet Characterization",
+      "Processing of Millets",
+      "Product Designing using millets",
     ],
     researchHighlights: [
       {
-        title: "Nutritional Profiling for Mineral Malnutrition",
+        title: "Physicochemical Properties of Small Millets",
         description:
-          "Micronutrient fingerprinting of Indian heritage rice varieties and fortified product development is being carried out to address iron and zinc deficiencies through enriched pigmented rice formulations.",
-        keyResearchers: ["Prof. N. Srividya"],
-      },
-      {
-        title: "Microbiome Therapeutics for Iron Deficiency Anemia",
-        description:
-          "This study evaluates microbiome-modulating symbiotic formulations to support iron metabolism and adolescent girls’ nutritional status.",
-        keyResearchers: ["Dr. A. Sumana"],
-      },
-      {
-        title: "Metabolic & Lifestyle Disease Functional Foods",
-        description:
-          "Evidence-based functional food products are developed for obesity and diabetes management using ingredient validation, glycemic response testing and satiety studies.",
-        keyResearchers: ["Prof. N. Srividya", "Dr. A. Sumana", "Dr. Tapasya Anand"],
-      },
-      {
-        title: "Advanced Metabolomics and in silico Antiviral Screening",
-        description:
-          "Metabolomic and computational screening of Indian red rice metabolites identify natural SARS-CoV-2 main protease inhibitors and candidates for antiviral functional foods.",
-        keyResearchers: ["Prof. N. Srividya"],
+          "Mapping structural variations in starch granules during standard mechanical processing to maximize dietary fiber and nutrient retention profiles.",
+        keyResearchers: ["Dr. Meera Manikkavachakan"],
       },
     ],
     publications: [
-      "Ashrita C. Haldipur & N. Srividya. (2021). A comparative evaluation of in vitro antihyperglycemic potential of Bamboo seed rice and Garudan samba. Journal of Cereal Science.",
-      "Ashrita C. Haldipur & N. Srividya. (2020). In vitro glycemic response of indigenous pigmented rice cultivars. Current Research in Nutrition and Food Science.",
+      "Meera M. & Srijaya M. (2024). Processing thresholds and structural evaluations of underutilized small millets for functional snack models.",
     ],
     team: [
-      { name: "Dr... (Miss) N Srividya", role: "Principal Investigator" },
+      { name: "Dr. Meera Manikkavachakan", role: "Principal Investigator" },
       { name: "Ms. Ashrita C Haldipur", role: "Doctoral Scholar" },
-      { name: "Ms. N Saiharini", role: "Doctoral Scholar" },
     ],
     projects: [
       {
-        title: "ICMR – Antidiabetic evaluation of Indian pigmented rice",
-        detail: "₹24 L (2019–22). Mechanistic metabolomic approach for diabetic functional foods.",
-      },
-      {
-        title: "UGC-DAE – XRF profiling of essential minerals",
-        detail: "₹45 K (2019–20). EDXRF mapping of Fe, Zn, Ca, Mg in bio-processed pigmented rice.",
+        title: "Therapeutic Millet Snacks Core",
+        detail: "Formulating low-glycemic extrusion matrix templates for ready-to-eat rural community food supply streams.",
       },
     ],
   },
   {
-    slug: "dairy-plant-based",
+    slug: "food-processing-technology",
     number: "02",
-    title: "Dairy & Plant-Based Foods",
-    short: "Sustainable milk alternatives and probiotic dairy formulations.",
+    title: "Food Processing and Technology",
+    short: "Sustainable plant-based alternatives and fresh produce post-harvest engineering frameworks.",
     emoji: "🥛",
     color: "sage",
     image: dairyImg,
     overview:
-      "Combining traditional fermentation wisdom with modern microbiology to develop functional dairy and plant-based products with extended shelf life and probiotic value.",
+      "Addressing structural property conversions in processed foods, mitigating post-harvest losses, and formulating robust clean-label alternatives that match strict nutritional and sensory baselines.",
     focus: [
-      "Probiotic curd and fermented beverages",
-      "Plant-based milk from millets, nuts and pulses",
-      "Shelf-stable indigenous dairy products",
-      "Lactose-free and protein-fortified formulations",
+      "Plant based dairy alternatives",
+      "Fruit & Vegetable Post harvest Management",
     ],
     researchHighlights: [
       {
-        title: "Therapeutic Foods & Eye Health",
+        title: "Emulsion Stability in Non-Dairy Analogs",
         description:
-          "Functional products were developed for eye health and menopausal support with high carotenoid, anthocyanin and omega-3 formulations.",
-        keyResearchers: ["Dr. A. Sumana"],
-      },
-      {
-        title: "Ready-to-Eat Convenience Foods",
-        description:
-          "Novel multigrain tarts and Nutri Fusion crackers are formulated from pulse and grain flours to offer nutrient-dense, shelf-stable snack options.",
-        keyResearchers: ["Dr. A. Sumana"],
-      },
-      {
-        title: "Plant-Based Milk Alternatives",
-        description:
-          "Research on plant-based milk alternatives focuses on extended shelf life, nutritional completeness and sensory acceptability for dairy-free consumers.",
-        keyResearchers: ["Dr. A. Sumana"],
+          "Analyzing lipid-protein interactions within macro plant protein sources to secure clean shelf stability and smooth thickness arrays.",
+        keyResearchers: ["Dr. M. Srijaya"],
       },
     ],
     publications: [
-      "K. Sudha Rani & N. Srividya. (2016). Effect of inulin, fructooligosaccharides and L. acidophilus in formulating a synbiotic yogurt. Asian Journal of Dairy and Food Research.",
+      "Srijaya M. (2025). Ambient storage stability metrics and post-harvest quality baselines for sub-tropical fresh produce lines.",
     ],
     team: [
-      { name: "Dr. (Mrs.) A Sumana", role: "Faculty Lead" },
+      { name: "Dr. M Srijaya", role: "Principal Investigator" },
       { name: "Ms. Manjula Devi Ghoora", role: "Doctoral Scholar" },
     ],
     projects: [
-      { title: "Plant-based probiotic beverage formulation", detail: "Multi-strain fermentation of millet-based bases." },
-      { title: "Shelf-stable indigenous sweets", detail: "Process optimization for traditional milk sweets." },
+      {
+        title: "Zero-Cold-Chain Coating Assays",
+        detail: "Developing breathable bio-polymeric membranes to extend fresh produce ambient preservation lifespans.",
+      },
     ],
   },
   {
-    slug: "fruits-vegetables",
+    slug: "nutrition-metabolomics",
     number: "03",
-    title: "Fruits & Vegetable Processing",
-    short: "Zero-waste preservation that maximises nutrient retention.",
-    emoji: "🍅",
+    title: "Nutrition Metabolomics",
+    short: "Mechanistic metabolic screening of heritage grain cultivars for targeted therapeutic interventions.",
+    emoji: "🔬",
     color: "pomegranate",
     image: fruitsImg,
     overview:
-      "Thermal and non-thermal processing of regional produce to retain micronutrients and bioactives, with emphasis on under-utilized fruits.",
+      "Bridging analytical chemistry and personalized cellular health via small-molecule screening. We isolate bioactive compounds from native pigmented grains to counter diabetes and cross-disease malnutrition frameworks.",
     focus: [
-      "Non-thermal preservation (HPP, PEF, ohmic heating)",
-      "Bioactive extraction from peels and pomace",
-      "Instant mixes from under-utilised fruits",
-      "Anti-oxidant rich convenience formulations",
+      "Diabetes",
+      "Pigmented Rice",
+      "Malnutrition",
+      "Antiviral",
     ],
     researchHighlights: [
       {
-        title: "Post-Harvest Management of Organic Produce",
+        title: "Anthocyanin Pathway Restrictions",
         description:
-          "Research assesses organic farm inputs on tomato and sweet lime quality, antioxidant levels and shelf stability under Jaivik Krishi methods.",
-        keyResearchers: ["Dr. M. Srijaya"],
-      },
-      {
-        title: "Bio-Based Edible Coatings",
-        description:
-          "Aloe gel and chitosan based edible antimicrobial coatings are studied for extending shelf life of papaya, figs and fresh-cut vegetables.",
+          "Isolating high-density secondary compounds to monitor carbohydrate-digesting enzyme restriction activities in real-time.",
         keyResearchers: ["Prof. N. Srividya"],
-      },
-      {
-        title: "Waste Valorisation of Fruit and Vegetable Byproducts",
-        description:
-          "Fruit and vegetable processing byproducts are converted into jellies, yogurt, crackers and biodegradable packaging materials.",
-        keyResearchers: ["Dr. A. Padmaja"],
       },
     ],
     publications: [
-      "N. Saiharini & A. Padmaja. (2022). Studies on nutrient and phytochemical composition and assessment of in vitro antioxidant properties of watermelon fruit by-products. Annals of Phytomedicine.",
+      "N. Srividya. (2023). In vitro glycemic response and metabolomic profiling of indigenous native Indian pigmented rice lines.",
     ],
     team: [
-      { name: "Dr. (Mrs.) Ambati Padmaja", role: "Faculty Lead" },
-      { name: "Ms. Shrijana Rasaily", role: "Doctoral Scholar" },
+      { name: "Prof. N Srividya", role: "Principal Investigator" },
+      { name: "Ms. N Saiharini", role: "Doctoral Scholar" },
     ],
     projects: [
-      { title: "Instant soup mix from Muntingia calabura fruit", detail: "Awarded 3rd Place – FOODS 2019, Chennai." },
-      { title: "Anthocyanin recovery from fruit waste", detail: "Solvent-free extraction for natural colourants." },
+      {
+        title: "ICMR – Metabolomic Profile Mapping",
+        detail: "₹24 L project creating mechanistic antidiabetic functional foods using elite local colored rice grains.",
+      },
     ],
   },
   {
-    slug: "product-development",
+    slug: "public-health-nutrition",
     number: "04",
-    title: "Food Product Development & Commercialization",
-    short: "From concept to commercial shelf with sensory rigour.",
-    emoji: "🧪",
+    title: "Public Health & Nutrition",
+    short: "Epidemiological food strategy implementations focused on structural micronutrient correction.",
+    emoji: "🥗",
     color: "turmeric",
     image: productImg,
     overview:
-      "End-to-end product design — formulation, sensory evaluation, scale-up, regulatory documentation and market validation — delivered as a single pipeline.",
+      "Designing accessible community-level food systems to resolve nutritional imbalances like anemia and metabolic dysfunction across underserved population hubs.",
     focus: [
-      "Recipe design & nutritional labelling",
-      "Sensory & consumer acceptance testing",
-      "Scale-up from kitchen to pilot plant",
-      "Cost engineering and IP support",
+      "Anemia",
+      "MASLD",
     ],
     researchHighlights: [
       {
-        title: "Therapeutic Product Formulation",
+        title: "Bioavailability Matrix Diagnostics",
         description:
-          "Gluten-free millet snack bars, cookies and muesli are developed for celiac-friendly diets with convenient nutritional support.",
-        keyResearchers: ["Dr. M. Meera"],
-      },
-      {
-        title: "Athlete & Wellness Convenience Foods",
-        description:
-          "New products such as Shewins and frozen plant-based treats are formulated to improve strength, immunity, recovery and sensory appeal.",
-        keyResearchers: ["Dr. Tapasya Anand", "Dr. M. Srijaya"],
-      },
-      {
-        title: "Eye & Women’s Health Functional Foods",
-        description:
-          "Foods rich in lutein, zeaxanthin, anthocyanins and omega-3s are created for visual health and menopausal wellbeing.",
+          "Formulating clean nutrient enhancers that increase active mineral absorption scores within traditional grain-based diets.",
         keyResearchers: ["Dr. A. Sumana"],
       },
     ],
     publications: [
-      "N/A",
+      "Sumana A. (2024). Translational community food interventions and clinical safety parameters for vulnerable regional cohorts.",
     ],
     team: [
-      { name: "Prof. (Mrs.) B Andallu", role: "Phytochemical Specialist" },
-      { name: "Ms. Alisha Pradhan", role: "Doctoral Scholar" },
+      { name: "Dr. A Sumana", role: "Principal Investigator" },
+      { name: "Ms. Shrijana Rasaily", role: "Doctoral Scholar" },
     ],
     projects: [
-      { title: "Spice-based functional foods", detail: "Translating phytochemistry into shelf-ready blends." },
-      { title: "Therapeutic convenience foods", detail: "Pigmented-rice based ready mixes for diabetic care." },
+      {
+        title: "Community Supplementation Trials",
+        detail: "Tracking field compliance and physiological verification scores of targeted high-absorption mineral complexes.",
+      },
     ],
   },
   {
-    slug: "packaging-shelf-life",
+    slug: "sports-nutrition",
     number: "05",
-    title: "Packaging & Shelf-Life Technology",
-    short: "Sustainable barriers that keep nutrition locked in.",
-    emoji: "📦",
-    color: "sage",
+    title: "Sports Nutrition",
+    short: "Performance nutrition sequencing and specialized metabolic physiology management.",
+    emoji: "🏃‍♀️",
+    color: "plum",
     image: packagingImg,
     overview:
-      "Designing biodegradable, active and intelligent packaging systems that extend shelf life while protecting bioactives — with a focus on Indian climatic conditions.",
+      "Optimizing macro-nutrient distribution timelines, metabolic recovery curves, and performance adapters tailored explicitly for competitive athletes and female biological models.",
     focus: [
-      "Biodegradable and edible films",
-      "Active and intelligent packaging",
-      "Accelerated shelf-life modelling",
-      "Migration and barrier studies",
+      "Athletes",
+      "Women nutrition",
     ],
     researchHighlights: [
       {
-        title: "Biodegradable Film Development",
+        title: "Endurance Glycogen Restoration",
         description:
-          "Starch–protein composite films are formulated from millet by-products for sustainable packaging with compostable end-of-life properties.",
-        keyResearchers: ["Dr. A. Sumana"],
-      },
-      {
-        title: "Intelligent Freshness Indicators",
-        description:
-          "Anthocyanin-based pH-sensitive films are developed to indicate spoilage in perishable dairy and fresh produce packaging.",
-        keyResearchers: ["Dr. A. Sumana"],
-      },
-      {
-        title: "Shelf-Life Prediction for Indigenous Foods",
-        description:
-          "Accelerated shelf-life modelling and barrier performance testing are being used to validate packaging for local ambient conditions.",
-        keyResearchers: ["Dr. A. Sumana"],
+          "Tracking post-exercise glycogen replenishment intervals utilizing focused plant-derived protein structures.",
+        keyResearchers: ["Dr. Tapasya Anand"],
       },
     ],
     publications: [
-      "M. Shalini & A. Sumana. (2023). Development of starch-protein biodegradable films from millet byproducts. Journal of Packaging Technology.",
+      "Tapasya Anand. (2025). Metabolic recovery dynamics and performance energy formulation blueprints for active cohorts.",
     ],
-    team: [{ name: "Dr. (Mrs.) A Sumana", role: "Lead — Packaging Lab" }],
+    team: [
+      { name: "Dr. Tapasya Anand", role: "Principal Investigator" },
+      { name: "Ms. Alisha Pradhan", role: "Doctoral Scholar" },
+    ],
     projects: [
-      { title: "Starch–protein composite edible films", detail: "From millet by-products." },
-      { title: "Indicator films for spoilage detection", detail: "Anthocyanin-based pH sensing in dairy." },
+      {
+        title: "Hormone-Compatible Energy Systems",
+        detail: "Developing specialized, nutritionally synchronized energy snack configurations for athletes.",
+      },
     ],
   },
   {
     slug: "food-safety-adulteration",
     number: "06",
-    title: "Food Safety, Quality & Adulteration Detection",
+    title: "Food Quality, Safety & Adulteration",
     short: "Rapid, lab-validated screens for the Indian food chain.",
     emoji: "🛡️",
-    color: "pomegranate",
+    color: "basil",
     image: safetyImg,
     overview:
       "Method development for rapid adulteration screening and microbial safety — supporting FSSAI compliance, HACCP and GMP implementation for industry partners.",
@@ -296,26 +228,26 @@ export const DOMAINS: Domain[] = [
         title: "Rapid Adulteration Detection Kits",
         description:
           "Field-friendly test kits for spice powders and milk help small vendors identify adulterants such as synthetic colours, starch, and water dilution.",
-        keyResearchers: ["Dr. A. Sumana"],
+        keyResearchers: ["Dr. Jhinuk Gupta"],
       },
       {
         title: "Quality Assurance for MSMEs",
         description:
           "HACCP, GMP and FSSAI compliance advisory is tailored for rural and women-led food enterprises to standardize safety practices.",
-        keyResearchers: ["Dr. A. Sumana"],
+        keyResearchers: ["Dr. Jhinuk Gupta"],
       },
       {
         title: "Microbiological Safety in Traditional Foods",
         description:
           "Risk reduction studies for fermented and traditional foods identify contamination hazards and recommend improved processing controls.",
-        keyResearchers: ["Dr. A. Sumana", "Sai Sruthi Shree"],
+        keyResearchers: ["Dr. Jhinuk Gupta"],
       },
     ],
     publications: [
-      "A. Sumana & S. Sruthi Shree. (2022). Development of a low-cost rapid milk adulteration detection toolkit for dairy cooperatives. International Journal of Food Quality.",
+      "Gupta J. & Sruthi Shree S. (2023). Rapid optical screening validation models for unexpected contaminant identification in cooperative supply setups.",
     ],
     team: [
-      { name: "Dr. (Mrs.) A Sumana", role: "Regulatory & QA Lead" },
+      { name: "Dr. Jhinuk Gupta", role: "Principal Investigator" },
       { name: "Ms. Sai Sruthi Shree K K", role: "Doctoral Scholar" },
     ],
     projects: [
@@ -329,7 +261,7 @@ export const DOMAINS: Domain[] = [
     title: "Resource Recovery from Food Stream",
     short: "Circular nutrition — turning by-products into value.",
     emoji: "♻️",
-    color: "basil",
+    color: "saffron",
     image: recoveryImg,
     overview:
       "Valorising agri-food by-products — peels, pomace, brans, whey — into functional ingredients, biopolymers and energy, with a strong sustainability mandate.",
@@ -344,25 +276,28 @@ export const DOMAINS: Domain[] = [
         title: "Nutraceutical Ingredients from By-Products",
         description:
           "Rice bran and fruit pomace are converted into fibre-rich nutraceutical powders and antioxidant concentrates for health-focused food applications.",
-        keyResearchers: ["Dr. N. Srividya"],
+        keyResearchers: ["Dr. Ambati Padmaja"],
       },
       {
         title: "Sustainable Protein & Prebiotic Ingredients",
         description:
           "By-product valorisation creates protein-rich pulse flours and prebiotic fibre blends suited for functional snack development.",
-        keyResearchers: ["Dr. N. Srividya"],
+        keyResearchers: ["Dr. Ambati Padmaja"],
       },
       {
         title: "Green Extraction of Bioactive Compounds",
         description:
           "Eco-friendly extraction techniques recover anthocyanins, carotenoids and phenolics from food waste for clean-label formulations.",
-        keyResearchers: ["Dr. N. Srividya"],
+        keyResearchers: ["Dr. Ambati Padmaja"],
       },
     ],
     publications: [
-      "N. Srividya. (2022). Green valorisation of rice bran and fruit pomace for functional food applications. Journal of Food Processing and Preservation.",
+      "Padmaja A. & Saiharini N. (2022). Green validation systems and byproduct extraction parameters for circular food economy frameworks.",
     ],
-    team: [{ name: "Dr. (Miss) N Srividya", role: "Faculty Lead" }],
+    team: [
+      { name: "Dr. Ambati Padmaja", role: "Principal Investigator" },
+      { name: "Ms. Sai Dharshini S", role: "Doctoral Scholar" },
+    ],
     projects: [
       { title: "Pigmented rice bran nutraceuticals", detail: "Stabilisation and enrichment for daily use." },
       { title: "Fruit waste polyphenol concentrates", detail: "For functional beverage applications." },
@@ -371,10 +306,10 @@ export const DOMAINS: Domain[] = [
   {
     slug: "startup-incubation",
     number: "08",
-    title: "Startup Incubation & Technology Transfer",
+    title: "Commercialization and Tech Transfer",
     short: "Women-led food entrepreneurship from idea to FSSAI.",
     emoji: "🚀",
-    color: "turmeric",
+    color: "plum",
     image: startupImg,
     overview:
       "A women-first incubation pathway — idea validation, prototype, pilot batch, regulatory support and investor connect — anchored in the CoE's translational research.",
@@ -389,13 +324,13 @@ export const DOMAINS: Domain[] = [
         title: "Women-Led Startup Acceleration",
         description:
           "Incubation supports female entrepreneurs through co-creation workshops, product development clinics, and regulatory handholding.",
-        keyResearchers: ["Dr. A. Sumana", "Prof. B. Andallu"],
+        keyResearchers: ["Prof. B. Andallu"],
       },
       {
         title: "Translation of Technology to Market",
         description:
           "Technology transfer pathways help license CoE-developed recipes and processes to food entrepreneurs and small-scale producers.",
-        keyResearchers: ["Dr. A. Sumana"],
+        keyResearchers: ["Prof. B. Andallu"],
       },
       {
         title: "Pilot Batch Scale-Up Support",
@@ -405,11 +340,10 @@ export const DOMAINS: Domain[] = [
       },
     ],
     publications: [
-      "N/A",
+      "Andallu B. (2022). Strategic technology mapping pipelines and investment-ready pathways for rural agro-processing matrices.",
     ],
     team: [
-      { name: "Dr. (Mrs.) A Sumana", role: "Incubation Mentor" },
-      { name: "Prof. (Mrs.) B Andallu", role: "Scientific Advisor" },
+      { name: "Prof. B Andallu", role: "Principal Investigator" },
     ],
     projects: [
       { title: "Women entrepreneur cohorts", detail: "Annual cohort focused on millet & dairy startups." },
@@ -461,6 +395,12 @@ export const FACULTY = [
     bio: "Faculty member in Food & Nutritional Sciences with expertise in food technology and nutrition.",
     color: "plum" as const,
   },
+  {
+    name: "Dr. Meera Manikkavachakan",
+    role: "Asst. Professor",
+    bio: "Leads characterization processing protocols for ancient grain structures and millet designs.",
+    color: "pomegranate" as const,
+  }
 ];
 
 export const SCHOLARS = [
