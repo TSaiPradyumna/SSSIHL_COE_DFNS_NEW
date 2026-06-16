@@ -6,6 +6,16 @@ import { DOMAINS } from "@/lib/domains";
 import heroRice from "@/assets/hero-rice.jpg";
 import heroSpices from "@/assets/hero-spices.jpg";
 
+// Explicitly import the faculty profile images detected in the project build repository
+import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpg";
+import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Srividya.jpg";
+import imgSumana from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-A_Sumana.jpg";
+import imgTapasya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg";
+import imgPadmaja from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Ambati_Padmaja.jpg";
+import imgGupta from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Jhinuk_Gupta.jpg";
+import imgAndallu from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-B_Andallu.jpg";
+import imgMeera from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Manikkavachakan.jpg";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -31,62 +41,62 @@ const ROADMAP = [
   { years: "Year 5", title: "Food Innovation Hub", body: "Support 100+ food startups. Develop export-ready technologies for South Asia.", color: "bg-sage" },
 ];
 
-// Localized independent team matrix to bypass missing records in external files
+// Localized independent team matrix updated with high-resolution image asset maps
 const HOME_TEAM_DATA = [
   {
     name: "Dr. M Srijaya",
     role: "Associate Professor & Head",
     category: "faculty",
-    color: "pomegranate",
+    image: imgSrijaya,
     bio: "Head of Food & Nutritional Sciences focusing on food processing, preservation and applied nutrition."
   },
   {
     name: "Prof. N Srividya",
     role: "Professor & Dean of Sciences",
     category: "faculty",
-    color: "turmeric",
+    image: imgSrividya,
     bio: "Dean of Sciences and active researcher in food science and nutrition with 25+ years of experience."
   },
   {
     name: "Dr. A Sumana",
     role: "Asst. Professor",
     category: "faculty",
-    color: "olive",
+    image: imgSumana,
     bio: "Food Industry Consultant and regulatory expert working at the intersection of safety and entrepreneurship."
   },
   {
     name: "Dr. Tapasya Anand",
     role: "Asst. Professor",
     category: "faculty",
-    color: "turmeric",
+    image: imgTapasya,
     bio: "Faculty member in Food & Nutritional Sciences contributing to functional foods and nutrition research."
   },
   {
     name: "Dr. Ambati Padmaja",
     role: "Asst. Professor",
     category: "faculty",
-    color: "plum",
+    image: imgPadmaja,
     bio: "Specializes in product development and sensory science. Awarded 3rd Place at FOODS 2019 for instant soup mix innovation."
   },
   {
     name: "Dr. Jhinuk Gupta",
     role: "Asst. Professor",
     category: "faculty",
-    color: "olive",
+    image: imgGupta,
     bio: "Faculty member in Food & Nutritional Sciences with expertise in food technology and nutrition."
   },
   {
     name: "Prof. B Andallu",
     role: "Professor (Hon.)",
     category: "advisor",
-    color: "plum",
+    image: imgAndallu,
     bio: "Invited speaker at the 107th Indian Science Congress on the role of phytochemicals in healthcare."
   },
   {
     name: "Dr. Meera Manikkavachakan",
     role: "Asst. Professor / Scientific Advisor",
     category: "advisor",
-    color: "pomegranate",
+    image: imgMeera,
     bio: "Active researcher in public nutrition, bioprocesses, and shelf-stability studies for multi-millet functional snack foods."
   }
 ];
@@ -174,7 +184,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED STARTUP SPOTLIGHT (Replaced Pigmented Rice Research) */}
+      {/* FEATURED STARTUP SPOTLIGHT */}
       <section className="bg-plum-deep text-cream py-24 lg:py-32 relative overflow-hidden">
         <div aria-hidden className="absolute top-10 right-10 size-72 border border-turmeric/20 rounded-full animate-spin-slow" />
         <div aria-hidden className="absolute bottom-10 left-10 size-48 border border-pomegranate/30 rounded-full animate-spin-slow" style={{ animationDirection: "reverse" }} />
@@ -218,7 +228,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FACULTY PREVIEW - Split Categories */}
+      {/* FACULTY PREVIEW - Enhanced with Real Profile Photo Rendering */}
       <section className="container-page py-24 lg:py-32 space-y-16">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 border-b border-plum/10 pb-6">
           <div>
@@ -236,9 +246,12 @@ function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {coreFaculty.map((f, i) => (
               <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
-                <div className={`size-14 rounded-2xl mb-5 grid place-items-center font-display italic text-2xl text-cream bg-${f.color}`}>
-                  {f.name.split(" ").slice(-1)[0]?.[0]}
-                </div>
+                {/* ✅ FIXED: Replaced initials placeholder with absolute image rendering aspect fields */}
+                <img 
+                  src={f.image} 
+                  alt={f.name} 
+                  className="w-14 h-14 rounded-2xl mb-5 object-cover ring-1 ring-plum/15 bg-plum/5 shadow-inner"
+                />
                 <h4 className="font-display text-xl mb-2 leading-tight text-plum-deep">{f.name}</h4>
                 <p className="text-xs uppercase tracking-widest text-plum-deep/50 font-bold mb-4">{f.role}</p>
                 <p className="text-sm text-plum-deep/70 leading-relaxed">{f.bio}</p>
@@ -253,9 +266,12 @@ function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {scientificAdvisors.map((f, i) => (
               <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
-                <div className={`size-14 rounded-2xl mb-5 grid place-items-center font-display italic text-2xl text-cream bg-${f.color}`}>
-                  {f.name.split(" ").slice(-1)[0]?.[0]}
-                </div>
+                {/* ✅ FIXED: Replaced initials placeholder with absolute image rendering aspect fields */}
+                <img 
+                  src={f.image} 
+                  alt={f.name} 
+                  className="w-14 h-14 rounded-2xl mb-5 object-cover ring-1 ring-plum/15 bg-plum/5 shadow-inner"
+                />
                 <h4 className="font-display text-xl mb-2 leading-tight text-plum-deep">{f.name}</h4>
                 <p className="text-xs uppercase tracking-widest text-plum-deep/50 font-bold mb-4">{f.role}</p>
                 <p className="text-sm text-plum-deep/70 leading-relaxed">{f.bio}</p>
@@ -295,9 +311,11 @@ function HomePage() {
               Industry, academia, FPOs and entrepreneurs — collaborate on translational food research,
               FSSAI-ready product development, and women-first incubation.
             </p>
-            <Link to="/contact" className="inline-flex px-8 py-4 bg-cream text-plum rounded-full font-bold hover:bg-turmeric transition-all shadow-xl">
-              Start a conversation →
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact" className="inline-flex px-8 py-4 bg-cream text-plum rounded-full font-bold hover:bg-turmeric transition-all shadow-xl">
+                Start a conversation →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
