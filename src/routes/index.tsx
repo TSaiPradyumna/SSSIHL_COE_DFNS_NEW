@@ -142,17 +142,53 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="relative group animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative aspect-square rounded-[40px] overflow-hidden shadow-2xl ring-1 ring-plum/10">
-              <img src={heroRice} alt="Indian pigmented rice from a woven basket" width={1280} height={1280} className="size-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-plum-deep/30 via-transparent to-transparent" />
+          {/* ✅ FIXED: High-End Stylized Typographic Crest Display Column (Replaced Old Rice Image Block Verbatim from image_07df8b.png) */}
+          <div 
+            className="relative aspect-square rounded-[40px] bg-gradient-to-br from-cream to-plum-deep/[0.04] ring-1 ring-plum/10 flex flex-col justify-between p-10 lg:p-14 overflow-hidden shadow-2xl animate-fade-up" 
+            style={{ animationDelay: "0.2s" }}
+          >
+            {/* Ambient Background Flourishes */}
+            <div aria-hidden className="absolute -top-16 -right-16 size-56 rounded-full border border-pomegranate/5 animate-spin-slow" />
+            <div aria-hidden className="absolute -bottom-20 -left-20 size-72 rounded-full bg-turmeric/10 blur-2xl" />
+
+            {/* Emblem Header */}
+            <div className="border-b border-plum/10 pb-5 relative z-10">
+              <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-pomegranate block mb-1.5">Academic Anchor</span>
+              <div className="font-display text-base lg:text-lg tracking-wide text-plum-deep font-semibold">
+                Department of Food & Nutritional Sciences
+              </div>
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-cream p-6 rounded-2xl shadow-xl ring-1 ring-plum/10 max-w-[220px] animate-float-slow">
-              <div className="font-display text-3xl italic text-pomegranate">570M</div>
-              <div className="text-[11px] font-medium uppercase tracking-tight text-plum-deep/60">Tonnes of global rice demand by 2025</div>
+
+            {/* Stylized Interlocking Calligraphy Centerpiece */}
+            <div className="relative my-auto py-6 flex flex-col items-center justify-center text-center z-10 select-none">
+              {/* Soft watermarked background block */}
+              <span className="absolute font-display text-[9rem] lg:text-[13rem] font-black text-plum-deep/[0.02] tracking-tighter leading-none">
+                Sai
+              </span>
+              
+              {/* DFNS Calligraphy Title */}
+              <div className="font-display italic text-6xl lg:text-8xl text-pomegranate font-light tracking-tight drop-shadow-sm animate-float-slow">
+                DFNS
+              </div>
+              
+              {/* Geometric Divider Line */}
+              <div className="w-16 h-px bg-turmeric my-4 opacity-75" />
+              
+              {/* SSSIHL Sub-Title */}
+              <div className="font-display italic text-3xl lg:text-4xl text-plum-deep tracking-wider font-normal opacity-90">
+                SSSIHL
+              </div>
             </div>
-            <div className="absolute -top-8 -right-4 size-24 rounded-full bg-turmeric/30 animate-spin-slow ring-1 ring-turmeric/40" />
+
+            {/* Emblem Footer */}
+            <div className="pt-5 border-t border-plum/10 relative z-10 flex items-center justify-between gap-4">
+              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-medium text-plum-deep/60">
+                Sri Sathya Sai Institute of Higher Learning
+              </span>
+              <span className="size-2 rounded-full bg-sage/60 animate-pulse shrink-0" />
+            </div>
           </div>
+
         </div>
       </section>
 
@@ -228,7 +264,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FACULTY PREVIEW - Enhanced with Real Profile Photo Rendering */}
+      {/* FACULTY PREVIEW */}
       <section className="container-page py-24 lg:py-32 space-y-16">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 border-b border-plum/10 pb-6">
           <div>
@@ -246,7 +282,6 @@ function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {coreFaculty.map((f, i) => (
               <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
-                {/* ✅ FIXED: Replaced initials placeholder with absolute image rendering aspect fields */}
                 <img 
                   src={f.image} 
                   alt={f.name} 
@@ -266,7 +301,6 @@ function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {scientificAdvisors.map((f, i) => (
               <div key={f.name} className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl transition-all animate-fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
-                {/* ✅ FIXED: Replaced initials placeholder with absolute image rendering aspect fields */}
                 <img 
                   src={f.image} 
                   alt={f.name} 
