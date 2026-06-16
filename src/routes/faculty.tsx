@@ -14,7 +14,19 @@ import imgMeera from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Ma
 import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Srividya.jpg";
 import imgTapasya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg";
 
-// Expanded rich dataset with category markers
+export const Route = createFileRoute("/faculty")({
+  head: () => ({
+    meta: [
+      { title: "Team Directory — SSSIHL Centre of Excellence" },
+      { name: "description", content: "Meet the multi-disciplinary faculty and scientific advisors driving SSSIHL's Centre of Excellence." },
+      { property: "og:title", content: "Our Team — SSSIHL CoE" },
+      { property: "og:description", content: "Core Faculty and Scientific Advisors driving food science research." },
+    ],
+  }),
+  component: FacultyPage,
+});
+
+// Expanded rich dataset with updated category markers and custom supervision arrays
 const FACULTY_DETAILS = [
   {
     name: "Dr. M Srijaya",
@@ -44,9 +56,8 @@ const FACULTY_DETAILS = [
       "Optimization of novel technologies for safeguarding organic produce quality during transport and storage."
     ],
     phdSupervision: [
-      "Ms. Alisha Pradhan (Postharvest Management of Fruits and Vegetables)",
-      "Ms. Beesetti Lohita (Novel technological approaches for processing of functional dairy products)",
-      "Ms. Deepika Shrestha (Dairy Science & Technology)"
+      "Ms. Lohitha",
+      "Ms. Deepika"
     ],
     projects: []
   },
@@ -77,9 +88,9 @@ const FACULTY_DETAILS = [
       "Development of several rural and industry-based functional food technologies"
     ],
     phdSupervision: [
-      "Ms. Shrijana Rasaily (Therapeutic and bioactivity assessment of functional foods)",
-      "Ms. Sai Sruthi Shree K K (Nutritional Profiling of Food Materials)",
-      "Ms. Mounika Pandey"
+      "Ms. Sai Sruthi Shree",
+      "Ms. Mounika",
+      "Ms. Inderdeep"
     ],
     projects: [
       {
@@ -121,7 +132,7 @@ const FACULTY_DETAILS = [
     name: "Dr. A Sumana",
     category: "faculty",
     role: "Asst. Professor",
-    qualifications: "M.Sc., Ph.Ph.D.",
+    qualifications: "M.Sc., Ph.D.",
     email: "asumana@sssihl.edu.in",
     telephone: "+91 8554 272567",
     color: "olive",
@@ -144,8 +155,9 @@ const FACULTY_DETAILS = [
       "Directing product development and applied research in development of novel functional foods"
     ],
     phdSupervision: [
-      "Ms. Shivangi Verma (Nutritional Epidemiology)",
-      "Ms. Sparsh Sumnirom Subba"
+      "Ms. Shivangi",
+      "Ms. Sparsh",
+      "Ms. Sangeetha"
     ],
     projects: []
   },
@@ -172,9 +184,7 @@ const FACULTY_DETAILS = [
       "Shelf stability studies for multi millets based baked and roasted snack foods",
       "Nutrition education approaches and models for disseminating nutrition and health communication for vulnerable segment of population"
     ],
-    phdSupervision: [
-      "Ms. Sai Dharshini S (Snack Food Technology)"
-    ],
+    phdSupervision: [],
     projects: []
   },
   {
@@ -228,7 +238,7 @@ const FACULTY_DETAILS = [
       "Extraction and application of natural antioxidants in edible oils, utilisation of food processing waste to extract active components"
     ],
     phdSupervision: [
-      "Ms. Katam Veera Chaitanya Bhagavathi (Valorization of Food Processing Waste)"
+      "Ms. Chaitanya"
     ],
     projects: []
   },
@@ -254,24 +264,12 @@ const FACULTY_DETAILS = [
       "Biofuels from food wastes"
     ],
     phdSupervision: [
-      "Ms Amrita Shaw (Food Safety)",
-      "Ms Bezawada Sree Sesha Sravanika (Food Safety & Quality Management)"
+      "Ms. Amrita Shaw",
+      "Ms. Sree Sesha Sravanika"
     ],
     projects: []
   }
 ];
-
-export const Route = createFileRoute("/faculty")({
-  head: () => ({
-    meta: [
-      { title: "Team Directory — SSSIHL Centre of Excellence" },
-      { name: "description", content: "Meet the multi-disciplinary faculty and scientific advisors driving SSSIHL's Centre of Excellence." },
-      { property: "og:title", content: "Our Team — SSSIHL CoE" },
-      { property: "og:description", content: "Core Faculty and Scientific Advisors driving food science research." },
-    ],
-  }),
-  component: FacultyPage,
-});
 
 function FacultyPage() {
   const [selectedFaculty, setSelectedFaculty] = useState<typeof FACULTY_DETAILS[0] | null>(null);
@@ -492,7 +490,7 @@ function FacultyPage() {
                   </div>
 
                   {selectedFaculty.projects.length > 0 && (
-                    <div>
+                    <div className="animate-fade-up">
                       <h4 className="font-display text-lg text-plum-deep mb-3 border-b border-plum/5 pb-1">Current Capital Projects</h4>
                       <div className="space-y-3">
                         {selectedFaculty.projects.map((project, index) => (
@@ -506,8 +504,8 @@ function FacultyPage() {
                   )}
 
                   {selectedFaculty.phdSupervision.length > 0 && (
-                    <div>
-                      <h4 className="font-display text-lg text-plum-deep mb-3 border-b border-plum/5 pb-1">Current Ph.D. Supervision</h4>
+                    <div className="animate-fade-up">
+                      <h4 className="font-display text-lg text-plum-deep mb-3 border-b border-plum/5 pb-1">Current Scholar Supervision</h4>
                       <div className="grid sm:grid-cols-2 gap-2 text-xs">
                         {selectedFaculty.phdSupervision.map((scholar, idx) => (
                           <div key={idx} className="p-3 bg-plum-deep/5 rounded-xl text-plum-deep/80 border border-plum/5 flex items-center gap-2">
