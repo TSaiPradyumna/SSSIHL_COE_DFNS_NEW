@@ -142,6 +142,7 @@ function HomePage() {
               Where <span className="italic text-shimmer">Science</span><br />
               Meets <span className="italic text-pomegranate">Sustenance.</span>
             </h1>
+            <h2 className="sr-only">Smart Food Systems Core Hub</h2>
             <p className="text-lg text-plum-deep/70 leading-relaxed max-w-xl mb-10">
               The Centre of Excellence in Smart Food Systems bridges ancient Indian wisdom with
               modern nutritional precision — led by women researchers, translating laboratory breakthroughs
@@ -264,9 +265,20 @@ function HomePage() {
                   </span>
                 </div>
                 <h3 className="font-display text-2xl lg:text-3xl mb-4">Zuno Foods</h3>
-                <p className="text-cream/70 text-sm lg:text-base leading-relaxed mb-6">
+                <p className="text-cream/70 text-sm lg:text-base leading-relaxed mb-5">
                   Operating under SaiMeethya Foods Pvt Ltd, this purpose-driven startup transforms ancestral millets into accessible, clean-label, and science-backed daily nutrition systems like porridges, smoothies, thins, and functional nutrient bars.
                 </p>
+                <div className="mb-6">
+                  <a 
+                    href="https://www.zunofoods.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-turmeric hover:text-cream transition-colors group"
+                  >
+                    Visit Official Website 
+                    <span className="inline-block transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[10px]">&nearr;</span>
+                  </a>
+                </div>
                 <ul className="space-y-3 text-sm text-cream/85 mb-8">
                   <li className="flex items-center gap-3">
                     <span className="size-5 rounded-full bg-turmeric/20 text-turmeric grid place-items-center text-xs shrink-0">✓</span>

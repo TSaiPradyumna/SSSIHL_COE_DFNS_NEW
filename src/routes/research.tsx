@@ -38,6 +38,7 @@ const UPCOMING_COLLABORATIONS = [
   { name: "NYUCT", scope: "International scholastic exchange, resource sharing protocols, and modern cross-border food preservation benchmarking research." },
   { name: "Zunofoods", scope: "Industrial technology licensing pipelines, commercial scale-up infrastructure, and localized direct-to-consumer nutritional product optimization." },
   { name: "9to6 foods", scope: "Translational packaging systems, specialized convenience food configurations, ready-to-eat stability analytics, and extended shelf-life formulations." },
+  { name: "Om Anandam Foods LLP", scope: "Collaborating on advanced food processing research, operational excellence, and experiential management training to foster industry-ready innovation." }
 ];
 
 function CollaborationPage() {
