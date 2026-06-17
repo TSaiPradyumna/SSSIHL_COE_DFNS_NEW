@@ -110,9 +110,13 @@ function DomainDetail() {
               <div key={item.title} className="p-7 rounded-3xl bg-card ring-1 ring-plum/10 hover:ring-saffron transition-all">
                 <h3 className="font-display text-xl mb-3 leading-tight">{item.title}</h3>
                 <p className="text-plum-deep/75 leading-relaxed mb-4">{item.description}</p>
-                <div className="text-sm uppercase tracking-[0.18em] text-plum-deep/60">Research Lead</div>
+                
+                {/* Dynamically display "DFNS Faculty" or "Research Lead" header based on what's present */}
+                <div className="text-sm uppercase tracking-[0.18em] text-plum-deep/60">
+                  {item.dfnsFaculty ? "DFNS Faculty" : "Research Lead"}
+                </div>
                 <div className="mt-2 text-sm text-plum-deep">
-                  {item.researchLead?.join(" • ")}
+                  {item.dfnsFaculty ? item.dfnsFaculty.join(" • ") : item.researchLead?.join(" • ")}
                 </div>
               </div>
             ))}
@@ -160,23 +164,6 @@ function DomainDetail() {
           ))}
         </div>
       </section>
-
-      {/* PUBLICATIONS - SUBSECTION COMMENTED OUT */}
-      {/* {d.publications?.length ? (
-        <section className="bg-cream-soft py-20">
-          <div className="container-page">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-plum font-bold mb-4">Publications</div>
-            <h2 className="font-display text-3xl lg:text-4xl mb-10">Evidence & peer-reviewed outputs.</h2>
-            <ul className="space-y-4">
-              {d.publications.map((pub) => (
-                <li key={pub} className="rounded-3xl bg-white p-6 ring-1 ring-plum/10 text-plum-deep leading-relaxed">
-                  {pub}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ) : null} */}
 
       {/* NEXT */}
       <section className="container-page pb-24">

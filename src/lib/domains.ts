@@ -17,7 +17,7 @@ export type Domain = {
   image: string;
   overview: string;
   focus: string[];
-  researchHighlights?: { title: string; description: string; researchLead: string[] }[];
+  researchHighlights?: { title: string; description: string; researchLead?: string[]; dfnsFaculty?: string[] }[];
   publications?: string[];
   team: { name: string; role: string }[];
   projects: { title: string; detail: string }[];
@@ -237,7 +237,7 @@ export const DOMAINS: Domain[] = [
         title: "Quality Assurance for MSMEs",
         description:
           "HACCP, GMP and FSSAI compliance advisory is tailored for rural and women-led food enterprises to standardize safety practices.",
-        researchLead: ["Dr. Jhinuk Gupta"],
+        dfnsFaculty: ["Dr. Jhinuk Gupta"],
       },
       {
         title: "Microbiological Safety in Traditional Foods",
@@ -417,4 +417,7 @@ export const SCHOLARS = [
   "Chaitanya",
   "Amritha Shaw",
   "Sree Sesha Sravanika",
+  "Alisha Pradhan ",
+  " Shrijana Rasaily",
+  "Sai Dharshini S"
 ];
