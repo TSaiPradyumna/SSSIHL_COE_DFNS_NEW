@@ -110,9 +110,9 @@ function DomainDetail() {
               <div key={item.title} className="p-7 rounded-3xl bg-card ring-1 ring-plum/10 hover:ring-saffron transition-all">
                 <h3 className="font-display text-xl mb-3 leading-tight">{item.title}</h3>
                 <p className="text-plum-deep/75 leading-relaxed mb-4">{item.description}</p>
-                <div className="text-sm uppercase tracking-[0.18em] text-plum-deep/60">Lead investigators</div>
+                <div className="text-sm uppercase tracking-[0.18em] text-plum-deep/60">Research Lead</div>
                 <div className="mt-2 text-sm text-plum-deep">
-                  {item.keyResearchers.join(" • ")}
+                  {item.researchLead?.join(" • ")}
                 </div>
               </div>
             ))}
@@ -121,29 +121,31 @@ function DomainDetail() {
       ) : null}
 
       {/* TEAM */}
-      <section className="bg-sage-soft py-20">
-        <div className="container-page">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-basil font-bold mb-4">Team</div>
-              <h2 className="font-display text-3xl lg:text-4xl">Researchers <span className="italic">on this domain</span></h2>
+      {d.team?.length ? (
+        <section className="bg-sage-soft py-20">
+          <div className="container-page">
+            <div className="flex items-end justify-between mb-12">
+              <div>
+                <div className="text-[10px] uppercase tracking-[0.25em] text-basil font-bold mb-4">Team</div>
+                <h2 className="font-display text-3xl lg:text-4xl">Researchers <span className="italic">on this domain</span></h2>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {d.team.map((m) => (
+                <div key={m.name} className="bg-cream p-6 rounded-3xl ring-1 ring-plum/10 hover:shadow-xl transition-all flex items-center gap-5">
+                  <div className="size-14 rounded-full bg-plum text-cream font-display italic text-xl grid place-items-center shrink-0">
+                    {m.name.split(" ").slice(-1)[0]?.[0]}
+                  </div>
+                  <div>
+                    <div className="font-semibold leading-tight">{m.name}</div>
+                    <div className="text-xs uppercase tracking-widest text-plum-deep/55 mt-1">{m.role}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {d.team.map((m) => (
-              <div key={m.name} className="bg-cream p-6 rounded-3xl ring-1 ring-plum/10 hover:shadow-xl transition-all flex items-center gap-5">
-                <div className="size-14 rounded-full bg-plum text-cream font-display italic text-xl grid place-items-center shrink-0">
-                  {m.name.split(" ").slice(-1)[0]?.[0]}
-                </div>
-                <div>
-                  <div className="font-semibold leading-tight">{m.name}</div>
-                  <div className="text-xs uppercase tracking-widest text-plum-deep/55 mt-1">{m.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       {/* PROJECTS */}
       <section className="container-page py-20">
@@ -159,7 +161,8 @@ function DomainDetail() {
         </div>
       </section>
 
-      {d.publications?.length ? (
+      {/* PUBLICATIONS - SUBSECTION COMMENTED OUT */}
+      {/* {d.publications?.length ? (
         <section className="bg-cream-soft py-20">
           <div className="container-page">
             <div className="text-[10px] uppercase tracking-[0.25em] text-plum font-bold mb-4">Publications</div>
@@ -173,7 +176,7 @@ function DomainDetail() {
             </ul>
           </div>
         </section>
-      ) : null}
+      ) : null} */}
 
       {/* NEXT */}
       <section className="container-page pb-24">
