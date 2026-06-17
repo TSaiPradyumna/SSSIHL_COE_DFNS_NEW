@@ -52,7 +52,6 @@ export const DOMAINS: Domain[] = [
     ],
     team: [
       { name: "Dr. Meera Manikkavachakan", role: "Principal Investigator" },
-      { name: "Ms. Ashrita C Haldipur", role: "Doctoral Scholar" },
     ],
     projects: [
       {
@@ -88,7 +87,8 @@ export const DOMAINS: Domain[] = [
     ],
     team: [
       { name: "Dr. M Srijaya", role: "Principal Investigator" },
-      { name: "Ms. Manjula Devi Ghoora", role: "Doctoral Scholar" },
+      { name: "Ms. Lohitha", role: "Research Scholar" },
+      { name: "Ms. Deepika", role: "Research Scholar" },
     ],
     projects: [
       {
@@ -126,7 +126,9 @@ export const DOMAINS: Domain[] = [
     ],
     team: [
       { name: "Prof. N Srividya", role: "Principal Investigator" },
-      { name: "Ms. N Saiharini", role: "Doctoral Scholar" },
+      { name: "Ms. Sai Shruthi Sree", role: "Research Scholar" },
+      { name: "Ms. Mounika", role: "Research Scholar" },
+      { name: "Ms. Inderdeep", role: "Research Scholar" },
     ],
     projects: [
       {
@@ -162,7 +164,9 @@ export const DOMAINS: Domain[] = [
     ],
     team: [
       { name: "Dr. A Sumana", role: "Principal Investigator" },
-      { name: "Ms. Shrijana Rasaily", role: "Doctoral Scholar" },
+      { name: "Ms. Shivangi", role: "Research Scholar" },
+      { name: "Ms. Sparsh", role: "Research Scholar" },
+      { name: "Ms. Sangeetha", role: "Research Scholar" },
     ],
     projects: [
       {
@@ -198,7 +202,6 @@ export const DOMAINS: Domain[] = [
     ],
     team: [
       { name: "Dr. Tapasya Anand", role: "Principal Investigator" },
-      { name: "Ms. Alisha Pradhan", role: "Doctoral Scholar" },
     ],
     projects: [
       {
@@ -248,7 +251,8 @@ export const DOMAINS: Domain[] = [
     ],
     team: [
       { name: "Dr. Jhinuk Gupta", role: "Principal Investigator" },
-      { name: "Ms. Sai Sruthi Shree K K", role: "Doctoral Scholar" },
+      { name: "Ms. Amritha Shaw", role: "Research Scholar" },
+      { name: "Ms. Sree Sesha Sravanika", role: "Research Scholar" },
     ],
     projects: [
       { title: "Adulterant screening in spice powders", detail: "Spectroscopic + colour-based rapid kits." },
@@ -296,7 +300,7 @@ export const DOMAINS: Domain[] = [
     ],
     team: [
       { name: "Dr. Ambati Padmaja", role: "Principal Investigator" },
-      { name: "Ms. Sai Dharshini S", role: "Doctoral Scholar" },
+      { name: "Ms. Chaitanya", role: "Research Scholar" },
     ],
     projects: [
       { title: "Pigmented rice bran nutraceuticals", detail: "Stabilisation and enrichment for daily use." },
@@ -404,11 +408,15 @@ export const FACULTY = [
 ];
 
 export const SCHOLARS = [
-  "Ms. Ashrita C Haldipur",
-  "Ms. Manjula Devi Ghoora",
-  "Ms. N Saiharini",
-  "Ms. Shrijana Rasaily",
-  "Ms. Alisha Pradhan",
-  "Ms. Sai Sruthi Shree K K",
-  "Ms. Sai Dharshini S",
+  "Sai Shruthi Sree",
+  "Mounika",
+  "Inderdeep",
+  "Lohitha",
+  "Deepika",
+  "Shivangi",
+  "Sparsh",
+  "Sangeetha",
+  "Chaitanya",
+  "Amritha Shaw",
+  "Sree Sesha Sravanika"
 ];
