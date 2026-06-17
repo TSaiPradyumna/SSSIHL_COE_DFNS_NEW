@@ -17,7 +17,7 @@ export type Domain = {
   image: string;
   overview: string;
   focus: string[];
-  researchHighlights?: { title: string; description: string; keyResearchers: string[] }[];
+  researchHighlights?: { title: string; description: string; researchLead: string[] }[];
   publications?: string[];
   team: { name: string; role: string }[];
   projects: { title: string; detail: string }[];
@@ -44,15 +44,14 @@ export const DOMAINS: Domain[] = [
         title: "Physicochemical Properties of Small Millets",
         description:
           "Mapping structural variations in starch granules during standard mechanical processing to maximize dietary fiber and nutrient retention profiles.",
-        keyResearchers: ["Dr. Meera Manikkavachakan"],
+        researchLead: ["Dr. Meera Manikkavachakan"],
       },
     ],
-    publications: [
+    /* publications: [
       "Meera M. & Srijaya M. (2024). Processing thresholds and structural evaluations of underutilized small millets for functional snack models.",
-    ],
+    ], */
     team: [
       { name: "Dr. Meera Manikkavachakan", role: "Principal Investigator" },
-      { name: "Dr. Sai Dharshini S", role: "Research Scholar" },
     ],
     projects: [
       {
@@ -80,12 +79,12 @@ export const DOMAINS: Domain[] = [
         title: "Emulsion Stability in Non-Dairy Analogs",
         description:
           "Analyzing lipid-protein interactions within macro plant protein sources to secure clean shelf stability and smooth thickness arrays.",
-        keyResearchers: ["Dr. M. Srijaya"],
+        researchLead: ["Dr. M. Srijaya"],
       },
     ],
-    publications: [
+    /* publications: [
       "Srijaya M. (2025). Ambient storage stability metrics and post-harvest quality baselines for sub-tropical fresh produce lines.",
-    ],
+    ], */
     team: [
       { name: "Dr. M Srijaya", role: "Principal Investigator" },
       { name: "Ms. Lohitha", role: "Research Scholar" },
@@ -119,12 +118,12 @@ export const DOMAINS: Domain[] = [
         title: "Anthocyanin Pathway Restrictions",
         description:
           "Isolating high-density secondary compounds to monitor carbohydrate-digesting enzyme restriction activities in real-time.",
-        keyResearchers: ["Prof. N. Srividya"],
+        researchLead: ["Prof. N. Srividya"],
       },
     ],
-    publications: [
+    /* publications: [
       "N. Srividya. (2023). In vitro glycemic response and metabolomic profiling of indigenous native Indian pigmented rice lines.",
-    ],
+    ], */
     team: [
       { name: "Prof. N Srividya", role: "Principal Investigator" },
       { name: "Ms. Sai Shruthi Sree", role: "Research Scholar" },
@@ -157,12 +156,12 @@ export const DOMAINS: Domain[] = [
         title: "Bioavailability Matrix Diagnostics",
         description:
           "Formulating clean nutrient enhancers that increase active mineral absorption scores within traditional grain-based diets.",
-        keyResearchers: ["Dr. A. Sumana"],
+        researchLead: ["Dr. A. Sumana"],
       },
     ],
-    publications: [
+    /* publications: [
       "Sumana A. (2024). Translational community food interventions and clinical safety parameters for vulnerable regional cohorts.",
-    ],
+    ], */
     team: [
       { name: "Dr. A Sumana", role: "Principal Investigator" },
       { name: "Ms. Shivangi", role: "Research Scholar" },
@@ -195,12 +194,12 @@ export const DOMAINS: Domain[] = [
         title: "Endurance Glycogen Restoration",
         description:
           "Tracking post-exercise glycogen replenishment intervals utilizing focused plant-derived protein structures.",
-        keyResearchers: ["Dr. Tapasya Anand"],
+        researchLead: ["Dr. Tapasya Anand"],
       },
     ],
-    publications: [
+    /* publications: [
       "Tapasya Anand. (2025). Metabolic recovery dynamics and performance energy formulation blueprints for active cohorts.",
-    ],
+    ], */
     team: [
       { name: "Dr. Tapasya Anand", role: "Principal Investigator" },
     ],
@@ -232,24 +231,24 @@ export const DOMAINS: Domain[] = [
         title: "Rapid Adulteration Detection Kits",
         description:
           "Field-friendly test kits for spice powders and milk help small vendors identify adulterants such as synthetic colours, starch, and water dilution.",
-        keyResearchers: ["Dr. Jhinuk Gupta"],
+        researchLead: ["Dr. Jhinuk Gupta"],
       },
       {
         title: "Quality Assurance for MSMEs",
         description:
           "HACCP, GMP and FSSAI compliance advisory is tailored for rural and women-led food enterprises to standardize safety practices.",
-        keyResearchers: ["Dr. Jhinuk Gupta"],
+        researchLead: ["Dr. Jhinuk Gupta"],
       },
       {
         title: "Microbiological Safety in Traditional Foods",
         description:
           "Risk reduction studies for fermented and traditional foods identify contamination hazards and recommend improved processing controls.",
-        keyResearchers: ["Dr. Jhinuk Gupta"],
+        researchLead: ["Dr. Jhinuk Gupta"],
       },
     ],
-    publications: [
+    /* publications: [
       "Gupta J. & Sruthi Shree S. (2023). Rapid optical screening validation models for unexpected contaminant identification in cooperative supply setups.",
-    ],
+    ], */
     team: [
       { name: "Dr. Jhinuk Gupta", role: "Principal Investigator" },
       { name: "Ms. Amritha Shaw", role: "Research Scholar" },
@@ -281,24 +280,24 @@ export const DOMAINS: Domain[] = [
         title: "Nutraceutical Ingredients from By-Products",
         description:
           "Rice bran and fruit pomace are converted into fibre-rich nutraceutical powders and antioxidant concentrates for health-focused food applications.",
-        keyResearchers: ["Dr. Ambati Padmaja"],
+        researchLead: ["Dr. Ambati Padmaja"],
       },
       {
         title: "Sustainable Protein & Prebiotic Ingredients",
         description:
           "By-product valorisation creates protein-rich pulse flours and prebiotic fibre blends suited for functional snack development.",
-        keyResearchers: ["Dr. Ambati Padmaja"],
+        researchLead: ["Dr. Ambati Padmaja"],
       },
       {
         title: "Green Extraction of Bioactive Compounds",
         description:
           "Eco-friendly extraction techniques recover anthocyanins, carotenoids and phenolics from food waste for clean-label formulations.",
-        keyResearchers: ["Dr. Ambati Padmaja"],
+        researchLead: ["Dr. Ambati Padmaja"],
       },
     ],
-    publications: [
+    /* publications: [
       "Padmaja A. & Saiharini N. (2022). Green validation systems and byproduct extraction parameters for circular food economy frameworks.",
-    ],
+    ], */
     team: [
       { name: "Dr. Ambati Padmaja", role: "Principal Investigator" },
       { name: "Ms. Chaitanya", role: "Research Scholar" },
@@ -329,27 +328,25 @@ export const DOMAINS: Domain[] = [
         title: "Women-Led Startup Acceleration",
         description:
           "Incubation supports female entrepreneurs through co-creation workshops, product development clinics, and regulatory handholding.",
-        keyResearchers: ["Prof. B. Andallu"],
+        researchLead: ["Prof. B. Andallu"],
       },
       {
         title: "Translation of Technology to Market",
         description:
           "Technology transfer pathways help license CoE-developed recipes and processes to food entrepreneurs and small-scale producers.",
-        keyResearchers: ["Prof. B. Andallu"],
+        researchLead: ["Prof. B. Andallu"],
       },
       {
         title: "Pilot Batch Scale-Up Support",
         description:
           "Pilot plant production guidance enables women agripreneurs to move products from formulation to certified market-ready batches.",
-        keyResearchers: ["Prof. B. Andallu"],
+        researchLead: ["Prof. B. Andallu"],
       },
     ],
-    publications: [
+    /* publications: [
       "Andallu B. (2022). Strategic technology mapping pipelines and investment-ready pathways for rural agro-processing matrices.",
-    ],
-    team: [
-      { name: "Prof. B Andallu", role: "Principal Investigator" },
-    ],
+    ], */
+    team: [],
     projects: [
       { title: "Women entrepreneur cohorts", detail: "Annual cohort focused on millet & dairy startups." },
       { title: "Technology transfer pipeline", detail: "Licensing of CoE-developed recipes and processes." },
@@ -420,5 +417,4 @@ export const SCHOLARS = [
   "Chaitanya",
   "Amritha Shaw",
   "Sree Sesha Sravanika",
-  "Dr. Sai Dharshini S"
 ];
