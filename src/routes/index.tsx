@@ -7,7 +7,6 @@ import { DOMAINS } from "@/lib/domains";
 // Explicitly import the new startup logo assets
 import logoZuno from "@/assets/zuno.png";
 import logoPadmakriti from "@/assets/padmakriti.png";
-import heroSpices from "@/assets/hero-spices.jpg";
 
 // Explicitly import the faculty profile images detected in the project build repository
 import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpg";
@@ -15,7 +14,7 @@ import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Sri
 import imgSumana from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-A_Sumana.jpg";
 import imgTapasya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg";
 import imgPadmaja from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Ambati_Padmaja.jpg";
-import imgGupta from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Jhinuk_Gupta.jpg";
+import imgGupta holiday from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Jhinuk_Gupta.jpg";
 import imgAndallu from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-B_Andallu.jpg";
 import imgMeera from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Manikkavachakan.jpg";
 
