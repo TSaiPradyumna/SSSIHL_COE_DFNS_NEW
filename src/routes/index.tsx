@@ -335,9 +335,6 @@ function HomePage() {
               className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl hover:ring-pomegranate/20 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
-                <div className="font-mono text-xs text-pomegranate/50 font-bold tracking-widest mb-4 group-hover:text-pomegranate transition-colors">
-                  // CODE_{fac.id}
-                </div>
                 <h3 className="font-display text-xl text-plum-deep mb-3 leading-tight min-h-[3.5rem] flex items-center">
                   {fac.name}
                 </h3>
@@ -358,8 +355,8 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FACULTY PREVIEW */}
-      <section className="container-page py-24 lg:py-32 space-y-16">
+      {/* FACULTY PREVIEW - HIDE/COMMENTED BLOCK */}
+      {/* <section className="container-page py-24 lg:py-32 space-y-16">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 border-b border-plum/10 pb-6">
           <div>
             <div className="text-[10px] uppercase tracking-[0.25em] text-sage font-bold mb-4">Academic Leadership</div>
@@ -370,7 +367,6 @@ function HomePage() {
           </Link>
         </div>
 
-        {/* Sub-Group 1: Core Faculty Matrix */}
         <div className="space-y-6">
           <h3 className="font-display text-2xl text-plum-deep border-b border-plum/5 pb-2">Core Faculty</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -389,7 +385,6 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Sub-Group 2: Scientific Advisors Matrix */}
         <div className="space-y-6">
           <h3 className="font-display text-2xl text-plum-deep border-b border-plum/5 pb-2">Scientific Advisors</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -408,6 +403,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ROADMAP */}
       <section className="container-page py-24">
