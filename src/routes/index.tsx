@@ -17,8 +17,8 @@ import imgAndallu from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-B_Anda
 import imgMeera from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Manikkavachakan.jpg";
 
 // New Incubated Startup Assets
-import logoZuno from "@/assets/zuno.png";
-import logoPadmakriti from "@/assets/padmakriti.png";
+import logoZuno from "@/assets/zuno-removebg-preview (5).png";
+import logoPadmakriti from "@/assets/padmakriti-removebg-preview.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
