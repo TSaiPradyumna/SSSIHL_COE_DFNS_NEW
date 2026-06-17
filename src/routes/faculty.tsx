@@ -37,7 +37,8 @@ const DOCTORAL_SCHOLARS = [
   "Sangeetha",
   "Chaitanya",
   "Amritha Shaw",
-  "Sree Sesha Sravanika"
+  "Sree Sesha Sravanika",
+  "Dr. Sai Dharshini S"
 ];
 
 // Expanded rich dataset with updated category markers and custom supervision arrays

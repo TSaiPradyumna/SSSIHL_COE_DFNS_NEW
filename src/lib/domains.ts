@@ -52,6 +52,7 @@ export const DOMAINS: Domain[] = [
     ],
     team: [
       { name: "Dr. Meera Manikkavachakan", role: "Principal Investigator" },
+      { name: "Dr. Sai Dharshini S", role: "Research Scholar" },
     ],
     projects: [
       {
@@ -418,5 +419,6 @@ export const SCHOLARS = [
   "Sangeetha",
   "Chaitanya",
   "Amritha Shaw",
-  "Sree Sesha Sravanika"
+  "Sree Sesha Sravanika",
+  "Dr. Sai Dharshini S"
 ];
