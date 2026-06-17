@@ -3,12 +3,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DomainCard } from "@/components/DomainCard";
 import { DOMAINS } from "@/lib/domains";
-import heroRice from "@/assets/hero-rice.jpg";
-import heroSpices from "@/assets/hero-spices.jpg";
 
 // Explicitly import the new startup logo assets
 import logoZuno from "@/assets/zuno.png";
 import logoPadmakriti from "@/assets/padmakriti.png";
+import heroSpices from "@/assets/hero-spices.jpg";
 
 // Explicitly import the faculty profile images detected in the project build repository
 import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpg";
@@ -212,7 +211,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* EQUAL STARTUP INCUBATION SPOTLIGHT (Rebuilt for Equal Dual Feature) */}
+      {/* EQUAL STARTUP INCUBATION SPOTLIGHT */}
       <section className="bg-plum-deep text-cream py-24 lg:py-32 relative overflow-hidden">
         <div aria-hidden className="absolute top-10 right-10 size-72 border border-turmeric/20 rounded-full animate-spin-slow" />
         <div aria-hidden className="absolute bottom-10 left-10 size-48 border border-pomegranate/30 rounded-full animate-spin-slow" style={{ animationDirection: "reverse" }} />
