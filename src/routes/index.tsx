@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
 
 const METRICS = [
   { value: "08", label: "Flagship Domains", color: "text-pomegranate" },
-  { value: "₹24L+", label: "ICMR Funded Research", color: "text-saffron" },
+  { value: "₹49L+", label: "ICMR Funded Research", color: "text-saffron" },
   { value: "15+", label: "Doctoral Scholars", color: "text-sage" },
   { value: "100%", label: "Women-Led Faculty", color: "text-plum" },
 ];

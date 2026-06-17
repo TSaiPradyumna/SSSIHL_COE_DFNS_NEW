@@ -54,7 +54,7 @@ const FACULTY_DETAILS = [
     color: "pomegranate",
     image: imgSrijaya,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: false },
-    overview: "Dr. (Mrs.) M Srijaya pursued her Bachelors in Home Science and Masters in Food Science and Nutrition from Sri Sathya Sai Institute of Higher Learning. She then joined the department as a lecturer in the year 1996. She also completed her Ph.D. in Food Technology from Sri Venkateswara University, Tirupathi, Andhra Pradesh. She is currently the Head, Department of Food & Nutritional Sciences, SSSIHL. She has extensive teaching and research experience in the fields of Food Technology and Nutrition and has efficaciously taught both core technical and applied courses to under graduate and post graduate students. Her research interests lie in the areas of food processing, preservation and applied nutrition. She has guided several students in the related areas, published papers and presented her research in various conferences.",
+    overview: "Dr. (Mrs.) M Srijaya pursued her Bachelors and Masters in Food Science and Nutrition from Sri Sathya Sai Institute of Higher Learning. She then joined the department as a lecturer in the year 1996. She also completed her Ph.D. in Food Technology from Sri Venkateswara University, Tirupathi, Andhra Pradesh. She is currently the Head, Department of Food & Nutritional Sciences, SSSIHL. She has extensive teaching and research experience in the fields of Food Technology and Nutrition and has efficaciously taught both core technical and applied courses to under graduate and post graduate students. Her research interests lie in the areas of food processing, preservation and applied nutrition. She has guided several students in the related areas, published papers and presented her research in various conferences.",
     areasOfTeaching: [
       "Food Chemistry",
       "Food Processing and preservation",
@@ -154,7 +154,7 @@ const FACULTY_DETAILS = [
     color: "olive",
     image: imgSumana,
     professionalPages: { linkedin: false, researchgate: true, googleScholar: false },
-    overview: "Dr. A Sumana is actively involved in research work apart from her full-time teaching duties. She graduated from Sri Sathya Sai Institute of Higher Learning in 1999 with a B.Sc. degree in Home Science. She graduated in her masters in Food Science and Nutrition from Sri Sathya Sai Institute of Higher Learning in 2001. She then cleared the National Eligibility Test (NET) for lectureship and joined Sri Sathya Sai Institute of Higher Learning in 2001. She went on to complete her Doctorate degree in 2017 from Sri Padmavati Mahila Visvavidyalayam, Tirupati, Andhra Pradesh.",
+    overview: "Dr. A Sumana is actively involved in research work apart from her full-time teaching duties. She graduated from Sri Sathya Sai Institute of Higher Learning in 1999 with a B.Sc. degree in Food Science and Nutrition. She graduated in her masters in Food Science and Nutrition from Sri Sathya Sai Institute of Higher Learning in 2001. She then cleared the National Eligibility Test (NET) for lectureship and joined Sri Sathya Sai Institute of Higher Learning in 2001. She went on to complete her Doctorate degree in 2017 from Sri Padmavati Mahila Visvavidyalayam, Tirupati, Andhra Pradesh.",
     areasOfTeaching: [
       "Microbial Food Safety",
       "Current Issues in Food Science",
@@ -187,7 +187,7 @@ const FACULTY_DETAILS = [
     color: "pomegranate",
     image: imgMeera,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: false },
-    overview: "Dr. Meera Manikkavachakan graduated from Sri Sathya Sai Institute of Higher Learning, Anantapur Campus with a B.Sc. in Home Science and then her M.Sc. in Food Science and Nutrition. She joined the department as a Lecturer in 1996. She pursued a PG Diploma in Preventive and Promotive Health Care (PGDPPHC) at Apollo Hospitals Educational Research Foundation, Hyderabad in 2005, a PG Diploma in Geriatric Care (DGC) at KMM Academy of Health Sciences, Kochi, Kerala in 2006 and Food Safety supervisor in Catering, (Level-2) by FSSAI. She got her Doctorate degree in Food Science and Nutrition from Sri Venkateswara University, Tirupati, Andhra Pradesh. She is actively involved in research work apart from full-time teaching duties.",
+    overview: "Dr. Meera Manikkavachakan graduated from Sri Sathya Sai Institute of Higher Learning, Anantapur Campus with a B.Sc. and then her M.Sc. in Food Science and Nutrition. She joined the department as a Lecturer in 1996. She pursued a PG Diploma in Preventive and Promotive Health Care (PGDPPHC) at Apollo Hospitals Educational Research Foundation, Hyderabad in 2005, a PG Diploma in Geriatric Care (DGC) at KMM Academy of Health Sciences, Kochi, Kerala in 2006 and Food Safety supervisor in Catering, (Level-2) by FSSAI. She got her Doctorate degree in Food Science and Nutrition from Sri Venkateswara University, Tirupati, Andhra Pradesh. She is actively involved in research work apart from full-time teaching duties.",
     areasOfTeaching: [
       "Public Nutrition and Epidemiology",
       "Research Methodology",
@@ -241,7 +241,7 @@ const FACULTY_DETAILS = [
     color: "plum",
     image: imgPadmaja,
     professionalPages: { linkedin: true, researchgate: true, googleScholar: false },
-    overview: "Dr. (Mrs.) Ambati Padmaja is an expert in Food Science, Nutrition and Technology (Phytochemical analysis, food fortification and evaluation and utilisation of food processing waste). She is actively involved in research work apart from her full-time teaching. She graduated from Sri Sathya Sai Institute of Higher Learning in 1997 with a B.Sc. in Home Science and M.Sc. in Food Science and Nutrition in 1999. She completed her Doctoral Degree in Food Technology in 2011 from Jawaharlal Nehru Technological University, Anantapur. She worked as a Senior Research Fellow in projects related to oilseeds and oils, funded by National bodies like Directorate of Vanaspati, Vegetable Oils and Fats, Govt. of India and DST. She also worked as a Lecturer at JNTUA-OTRI from 2010 to 2015. She then joined Sri Sathya Sai Institute of Higher Learning as an Assistant Professor at the Dept. of Food and Nutritional Sciences.",
+    overview: "Dr. (Mrs.) Ambati Padmaja is an expert in Food Science, Nutrition and Technology (Phytochemical analysis, food fortification and evaluation and utilisation of food processing waste). She is actively involved in research work apart from her full-time teaching. She graduated from Sri Sathya Sai Institute of Higher Learning in 1997 with a B.Sc.and M.Sc. in Food Science and Nutrition in 1999. She completed her Doctoral Degree in Food Technology in 2011 from Jawaharlal Nehru Technological University, Anantapur. She worked as a Senior Research Fellow in projects related to oilseeds and oils, funded by National bodies like Directorate of Vanaspati, Vegetable Oils and Fats, Govt. of India and DST. She also worked as a Lecturer at JNTUA-OTRI from 2010 to 2015. She then joined Sri Sathya Sai Institute of Higher Learning as an Assistant Professor at the Dept. of Food and Nutritional Sciences.",
     areasOfTeaching: [
       "Food Preservation",
       "Nutrition",
@@ -398,7 +398,7 @@ function FacultyPage() {
               <div className="text-[10px] uppercase tracking-[0.25em] text-turmeric font-bold mb-4">Doctoral Scholars</div>
               <h2 className="font-display text-4xl lg:text-5xl leading-tight">The <span className="italic">next generation.</span></h2>
               <p className="text-cream/70 mt-6 leading-relaxed">
-                Several SSSIHL scholars have qualified UGC-NET (LS) in Home Science and contribute to national-level workshops and symposia.
+                Several SSSIHL scholars have qualified UGC-NET and contribute to national-level workshops and symposia.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
