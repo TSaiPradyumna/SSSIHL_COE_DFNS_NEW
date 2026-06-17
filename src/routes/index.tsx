@@ -45,6 +45,17 @@ const ROADMAP = [
   { years: "Year 5", title: "Food Innovation Hub", body: "Support 100+ food startups. Develop export-ready technologies for South Asia.", color: "bg-sage" },
 ];
 
+const FACILITIES = [
+  { id: "01", name: "Food Quality Control Laboratory", description: "Standardizing safety markers and structural compositions for regulatory clearances." },
+  { id: "02", name: "Food and Culinary Science Laboratory", description: "Bridging nutritional science with premium sensory engineering and commercial formulation." },
+  { id: "03", name: "Food Chemistry and Analytical Laboratory", description: "Advanced compositional mapping, profiling biomacromolecules, and analytical matrices." },
+  { id: "04", name: "Sensory Science Laboratory", description: "Scientific evaluation arrays assessing profile textures, palettes, and user acceptabilities." },
+  { id: "05", name: "Food Microbiology Laboratory", description: "Safety verification infrastructures handling bioprocesses and shelf stability parameters." },
+  { id: "06", name: "Nutritional Biochemistry Laboratory", description: "Isolation mechanics and reverse pharmacology screenings for lifestyle wellness vectors." },
+  { id: "07", name: "Food Processing and Technology Laboratory", description: "Translational engineering systems facilitating postharvest handling and waste updates." },
+  { id: "08", name: "Baking Technology Laboratory", description: "Optimized thermal matrix labs focused on functional, clean-label snack configurations." },
+];
+
 // Localized independent team matrix updated with high-resolution image asset maps
 const HOME_TEAM_DATA = [
   {
@@ -303,6 +314,47 @@ function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* STATE-OF-THE-ART RESEARCH & LABORATORY FACILITIES */}
+      <section className="container-page py-24 lg:py-32">
+        <div className="text-center mb-16">
+          <div className="text-[10px] uppercase tracking-[0.25em] text-sage font-bold mb-4">Infrastructure Matrix</div>
+          <h2 className="font-display text-4xl lg:text-6xl mb-6">Advanced <span className="italic text-plum">Laboratory Hubs</span></h2>
+          <div className="w-24 h-1 bg-turmeric mx-auto mb-6" />
+          <p className="max-w-2xl mx-auto text-plum-deep/70">
+            Equipped with analytics cores, processing engines, and precise sensory configurations providing comprehensive pathways from research to verified production.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {FACILITIES.map((fac) => (
+            <div 
+              key={fac.id} 
+              className="bg-card rounded-3xl p-6 ring-1 ring-plum/10 hover:-translate-y-1 hover:shadow-xl hover:ring-pomegranate/20 transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div className="font-mono text-xs text-pomegranate/50 font-bold tracking-widest mb-4 group-hover:text-pomegranate transition-colors">
+                  // CODE_{fac.id}
+                </div>
+                <h3 className="font-display text-xl text-plum-deep mb-3 leading-tight min-h-[3.5rem] flex items-center">
+                  {fac.name}
+                </h3>
+                <p className="text-sm text-plum-deep/65 leading-relaxed">
+                  {fac.description}
+                </p>
+              </div>
+              <div className="mt-6 flex items-center justify-between border-t border-plum/5 pt-4">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-plum-deep/40 group-hover:text-plum transition-colors">
+                  Operational Core
+                </span>
+                <span className="font-display italic text-2xl text-turmeric font-semibold group-hover:scale-110 transition-transform">
+                  {fac.id}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
