@@ -6,6 +6,10 @@ import { DOMAINS } from "@/lib/domains";
 import heroRice from "@/assets/hero-rice.jpg";
 import heroSpices from "@/assets/hero-spices.jpg";
 
+// Explicitly import the new startup logo assets
+import logoZuno from "@/assets/zuno.png";
+import logoPadmakriti from "@/assets/padmakriti.png";
+
 // Explicitly import the faculty profile images detected in the project build repository
 import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpg";
 import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Srividya.jpg";
@@ -142,16 +146,14 @@ function HomePage() {
             </div>
           </div>
 
-          {/* ✅ FIXED: High-End Stylized Typographic Crest Display Column (Replaced Old Rice Image Block Verbatim from image_07df8b.png) */}
+          {/* High-End Stylized Typographic Crest Display Column */}
           <div 
             className="relative aspect-square rounded-[40px] bg-gradient-to-br from-cream to-plum-deep/[0.04] ring-1 ring-plum/10 flex flex-col justify-between p-10 lg:p-14 overflow-hidden shadow-2xl animate-fade-up" 
             style={{ animationDelay: "0.2s" }}
           >
-            {/* Ambient Background Flourishes */}
             <div aria-hidden className="absolute -top-16 -right-16 size-56 rounded-full border border-pomegranate/5 animate-spin-slow" />
             <div aria-hidden className="absolute -bottom-20 -left-20 size-72 rounded-full bg-turmeric/10 blur-2xl" />
 
-            {/* Emblem Header */}
             <div className="border-b border-plum/10 pb-5 relative z-10">
               <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-pomegranate block mb-1.5">Academic Anchor</span>
               <div className="font-display text-base lg:text-lg tracking-wide text-plum-deep font-semibold">
@@ -159,28 +161,19 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Stylized Interlocking Calligraphy Centerpiece */}
             <div className="relative my-auto py-6 flex flex-col items-center justify-center text-center z-10 select-none">
-              {/* Soft watermarked background block */}
               <span className="absolute font-display text-[9rem] lg:text-[13rem] font-black text-plum-deep/[0.02] tracking-tighter leading-none">
                 Sai
               </span>
-              
-              {/* DFNS Calligraphy Title */}
               <div className="font-display italic text-6xl lg:text-8xl text-pomegranate font-light tracking-tight drop-shadow-sm animate-float-slow">
                 DFNS
               </div>
-              
-              {/* Geometric Divider Line */}
               <div className="w-16 h-px bg-turmeric my-4 opacity-75" />
-              
-              {/* SSSIHL Sub-Title */}
               <div className="font-display italic text-3xl lg:text-4xl text-plum-deep tracking-wider font-normal opacity-90">
                 SSSIHL
               </div>
             </div>
 
-            {/* Emblem Footer */}
             <div className="pt-5 border-t border-plum/10 relative z-10 flex items-center justify-between gap-4">
               <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-medium text-plum-deep/60">
                 Sri Sathya Sai Institute of Higher Learning
@@ -188,7 +181,6 @@ function HomePage() {
               <span className="size-2 rounded-full bg-sage/60 animate-pulse shrink-0" />
             </div>
           </div>
-
         </div>
       </section>
 
@@ -220,44 +212,64 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED STARTUP SPOTLIGHT */}
+      {/* EQUAL STARTUP INCUBATION SPOTLIGHT (Rebuilt for Equal Dual Feature) */}
       <section className="bg-plum-deep text-cream py-24 lg:py-32 relative overflow-hidden">
         <div aria-hidden className="absolute top-10 right-10 size-72 border border-turmeric/20 rounded-full animate-spin-slow" />
         <div aria-hidden className="absolute bottom-10 left-10 size-48 border border-pomegranate/30 rounded-full animate-spin-slow" style={{ animationDirection: "reverse" }} />
 
-        <div className="container-page grid lg:grid-cols-2 gap-16 items-center relative">
-          <div className="relative">
-            <img src={heroSpices} alt="Spices in scientific glassware" width={1024} height={1280} loading="lazy" className="rounded-[40px] aspect-[4/5] object-cover shadow-2xl" />
-            <div className="absolute -bottom-6 -right-6 bg-turmeric text-plum-deep p-5 rounded-2xl shadow-xl max-w-[200px]">
-              <div className="text-xs font-bold uppercase tracking-widest mb-1">Incubated Entity</div>
-              <div className="font-display italic text-2xl leading-tight">RoC Vijayawada</div>
-            </div>
-          </div>
-          <div>
+        <div className="container-page relative">
+          <div className="text-center mb-16 max-w-2xl mx-auto">
             <h4 className="text-turmeric text-[10px] font-bold uppercase tracking-[0.25em] mb-4">Startup Incubation Spotlight</h4>
-            <h2 className="font-display text-4xl lg:text-5xl leading-tight mb-6">
-              Padmakriti Innovations <span className="italic">Private Limited</span>
-            </h2>
-            <p className="text-cream/70 text-lg leading-relaxed mb-8">
-              An active manufacturing and processing enterprise translating lab breakthroughs into scalable commercial avenues, focusing on clean-label semi-processed configurations, convenience systems, and ready-to-eat specialty food matrix innovations.
+            <h2 className="font-display text-4xl lg:text-5xl mb-4">Emerged from the <span className="italic">Research & Development of DFNS</span></h2>
+            <p className="text-cream/70 text-sm sm:text-base">
+              Translational lab breakthroughs successfully scaled into commercial daily functional nutrition systems and clean-label manufacturing platforms.
             </p>
-            <ul className="space-y-4 mb-10">
-              {[
-                "Semi-processed, instant & specialty food products",
-                "CIN: U10799AP2025PTC121377 | Incorporated Sept 20, 2025",
-                "Registered Hub: Puttaparthi, Ananthapur, Andhra Pradesh",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-4">
-                  <span className="size-6 rounded-full bg-sage/30 ring-1 ring-sage grid place-items-center text-xs mt-0.5">✓</span>
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="flex items-center gap-4 p-5 rounded-2xl bg-cream/5 border border-cream/10 backdrop-blur w-fit">
-              <div className="size-12 bg-pomegranate rounded-full grid place-items-center font-display italic text-cream font-bold">Co</div>
-              <div>
-                <div className="font-semibold text-sm sm:text-base">Mounika Pandey • Srividya Nagarajan</div>
-                <div className="text-xs text-cream/60 uppercase tracking-widest mt-0.5">Company Directors & Leadership</div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {/* Venture 1: Zuno Foods */}
+            <div className="bg-cream/5 border border-cream/10 rounded-[32px] p-8 lg:p-10 flex flex-col justify-between backdrop-blur-sm shadow-xl hover:bg-cream/10 transition-all">
+              <div className="space-y-6">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="h-12 w-auto max-w-[140px] overflow-hidden flex items-center bg-cream/10 px-3 py-1.5 rounded-xl border border-cream/10">
+                    <img src={logoZuno} alt="Zuno Foods Logo" className="h-full w-full object-contain" />
+                  </div>
+                  <span className="px-2.5 py-1 bg-turmeric/10 text-turmeric text-[9px] uppercase tracking-wider font-bold rounded border border-turmeric/20">
+                    SaiMeethya Foods
+                  </span>
+                </div>
+                <div>
+                  <h3 className="font-display text-2xl lg:text-3xl text-cream font-bold leading-tight mb-3">Zuno Foods</h3>
+                  <p className="text-cream/80 text-sm leading-relaxed text-justify">
+                    An innovative startup transforming ancestral millets into modern, clean-label, and science-backed daily nutrition profiles including porridges, smoothies, thins, and specialized millet snack bars. It represents the inaugural startup incubated by the Sri Sathya Sai Research and Innovation Foundation (SSSRIF).
+                  </p>
+                </div>
+              </div>
+              <div className="pt-6 mt-6 border-t border-cream/10 text-xs text-cream/60 flex items-center gap-2">
+                <span className="font-semibold text-turmeric">Key Drivers:</span> Dr. Sai Dharshini S (CEO) • Dr. Meera M (PI)
+              </div>
+            </div>
+
+            {/* Venture 2: Padmakriti Innovations */}
+            <div className="bg-cream/5 border border-cream/10 rounded-[32px] p-8 lg:p-10 flex flex-col justify-between backdrop-blur-sm shadow-xl hover:bg-cream/10 transition-all">
+              <div className="space-y-6">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="h-12 w-auto max-w-[140px] overflow-hidden flex items-center bg-cream/10 px-3 py-1.5 rounded-xl border border-cream/10">
+                    <img src={logoPadmakriti} alt="Padmakriti Innovations Logo" className="h-full w-full object-contain" />
+                  </div>
+                  <span className="px-2.5 py-1 bg-sage/10 text-sage text-[9px] uppercase tracking-wider font-bold rounded border border-sage/20">
+                    RoC Vijayawada
+                  </span>
+                </div>
+                <div>
+                  <h3 className="font-display text-2xl lg:text-3xl text-cream font-bold leading-tight mb-3">Padmakriti Innovations</h3>
+                  <p className="text-cream/80 text-sm leading-relaxed text-justify">
+                    An active specialized corporate entity incorporated on September 20, 2025, operating structurally inside the processing sector. The enterprise builds clean-label, value-added culinary products, instant convenience mixes, and specialty micro-nutrient formulations engineered for commercial shelf scaling.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-6 mt-6 border-t border-cream/10 text-xs text-cream/60 flex items-center gap-2">
+                <span className="font-semibold text-turmeric">Key Drivers:</span> Mounika Pandey (Director) • Srividya Nagarajan (Director)
               </div>
             </div>
           </div>
