@@ -2,7 +2,6 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { SCHOLARS } from "@/lib/domains";
 
 // Import local assets matching your folder exactly to bypass external website blocking
 import imgSumana from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-A_Sumana.jpg";
@@ -25,6 +24,21 @@ export const Route = createFileRoute("/faculty")({
   }),
   component: FacultyPage,
 });
+
+// Cleaned up and updated production-ready list of Doctoral Scholars
+const DOCTORAL_SCHOLARS = [
+  "Sai Shruthi Sree",
+  "Mounika",
+  "Inderdeep",
+  "Lohitha",
+  "Deepika",
+  "Shivangi",
+  "Sparsh",
+  "Sangeetha",
+  "Chaitanya",
+  "Amritha Shaw",
+  "Sree Sesha Sravanika"
+];
 
 // Expanded rich dataset with updated category markers and custom supervision arrays
 const FACULTY_DETAILS = [
@@ -386,7 +400,7 @@ function FacultyPage() {
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
-              {SCHOLARS.map((s, i) => (
+              {DOCTORAL_SCHOLARS.map((s, i) => (
                 <div key={s} className="p-5 rounded-2xl bg-cream/5 ring-1 ring-cream/10 hover:bg-cream/10 transition-colors flex items-center gap-4">
                   <span className="font-mono text-xs text-turmeric">{String(i + 1).padStart(2, "0")}</span>
                   <span className="text-sm">{s}</span>
