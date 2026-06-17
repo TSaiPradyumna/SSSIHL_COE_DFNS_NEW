@@ -14,7 +14,7 @@ import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Sri
 import imgSumana from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-A_Sumana.jpg";
 import imgTapasya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg";
 import imgPadmaja from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Ambati_Padmaja.jpg";
-import imgGupta holiday from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Jhinuk_Gupta.jpg";
+import imgGupta from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Jhinuk_Gupta.jpg";
 import imgAndallu from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-B_Andallu.jpg";
 import imgMeera from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Manikkavachakan.jpg";
 
@@ -349,7 +349,7 @@ function HomePage() {
           <div aria-hidden className="absolute -top-20 -right-20 size-80 rounded-full bg-turmeric/30 blur-3xl" />
           <div className="relative max-w-2xl">
             <h2 className="font-display text-4xl lg:text-5xl leading-tight mb-6">
-              Partner with our <span className="italic">Centre of Excellence.</span>
+              Partner with our <span className="italic text-pomegranate">Centre of Excellence.</span>
             </h2>
             <p className="text-cream/85 text-lg mb-8">
               Industry, academia, FPOs and entrepreneurs — collaborate on translational food research,
