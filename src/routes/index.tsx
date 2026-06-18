@@ -7,7 +7,7 @@ import heroRice from "@/assets/hero-rice.jpg";
 import heroSpices from "@/assets/hero-spices.jpg";
 
 // Explicitly import the faculty profile images detected in the project build repository
-import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpg";
+import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpeg";
 import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Srividya.jpg";
 import imgSumana from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-A_Sumana.jpg";
 import imgTapasya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg";
