@@ -8,7 +8,7 @@ import imgSumana from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-A_Suman
 import imgPadmaja from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Ambati_Padmaja.jpg";
 import imgAndallu from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-B_Andallu.jpg";
 import imgGupta from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Jhinuk_Gupta.jpg";
-import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpg";
+import imgSrijaya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-M_Srijaya.jpeg";
 import imgMeera from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Meera_Manikkavachakan.jpg";
 import imgSrividya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-N_Srividya.jpg";
 import imgTapasya from "@/assets/SSSIHL-Faculty-Food-Nutritional-Sciences-Tapasya_Anand.jpg";
