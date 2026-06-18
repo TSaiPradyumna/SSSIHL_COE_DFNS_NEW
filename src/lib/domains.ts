@@ -323,6 +323,7 @@ export const DOMAINS: Domain[] = [
       "FSSAI, GMP & export compliance",
       "Investor and FPO network connect",
     ],
+    /*
     researchHighlights: [
       {
         title: "Women-Led Startup Acceleration",
@@ -343,6 +344,8 @@ export const DOMAINS: Domain[] = [
         researchLead: ["Prof. B. Andallu"],
       },
     ],
+    */
+   
     /* publications: [
       "Andallu B. (2022). Strategic technology mapping pipelines and investment-ready pathways for rural agro-processing matrices.",
     ], */
